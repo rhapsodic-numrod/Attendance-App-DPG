@@ -3,7 +3,7 @@
 ## Task Assignment:
 ### Tables to complete:
 * Student: Profiliu
-* Employee: 
+* Employee: Tengee
 * Module: 
 * Class: 
 * Attendance: 
