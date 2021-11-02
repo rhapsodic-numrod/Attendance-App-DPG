@@ -4,6 +4,6 @@
 ### Tables to complete:
 * Student: Profiliu
 * Employee: Tengee
-* Module: 
+* Module: Tray-vonn 
 * Class:
 * Attendance:Gift 
