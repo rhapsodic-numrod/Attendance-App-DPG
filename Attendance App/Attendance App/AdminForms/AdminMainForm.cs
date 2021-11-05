@@ -16,5 +16,47 @@ namespace Attendance_App.AdminForms
         {
             InitializeComponent();
         }
+        #region Button Hide and Show
+        private void hideSubMenu()
+        {
+            if (panelAccountSubMenu.Visible == true)
+            {
+                panelAccountSubMenu.Visible = false;
+            }
+            if (panelUsersSubMenu.Visible == true)
+            {
+                panelUsersSubMenu.Visible = false;
+            }
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false) //if the submenu not visible
+            {
+                hideSubMenu();          // hide all other submenus
+                subMenu.Visible = true; // then make the submenu visible
+            }
+            else
+            {
+                subMenu.Visible = false; // other wise hide the submenu if it is visible
+            }
+        }
+        #endregion
+        #region Main Buttons
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelAccountSubMenu);
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelUsersSubMenu);
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }
