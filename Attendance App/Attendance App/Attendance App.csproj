@@ -89,6 +89,12 @@
       <DependentUpon>ViewAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="AppClasses\ChildForms.cs" />
+    <Compile Include="LecturerForms\AddStudentGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerForms\AddStudentGrades.Designer.cs">
+      <DependentUpon>AddStudentGrades.cs</DependentUpon>
+    </Compile>
     <Compile Include="LecturerForms\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\ViewAccount.resx">
       <DependentUpon>ViewAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturerForms\AddStudentGrades.resx">
+      <DependentUpon>AddStudentGrades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LecturerForms\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
