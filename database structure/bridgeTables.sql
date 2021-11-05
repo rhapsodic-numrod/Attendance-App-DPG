@@ -1,5 +1,6 @@
 USE attendanceDatabase
 GO
+--############# Fully dependendent #############
 --Table for the student roles
 CREATE TABLE Student_Role (
 	studentID INT FOREIGN KEY REFERENCES Student(studentID),
@@ -27,11 +28,6 @@ CREATE TABLE Student_Attendance_Class (
 CREATE TABLE Employee_Role (
 	empID INT FOREIGN KEY REFERENCES Employee(empID),
 	roleID INT FOREIGN KEY REFERENCES Roles(roleID)
-)
---Table for modules the employees administer (Module Administrator)
-CREATE TABLE Module_Employee (
-	moduleID INT FOREIGN KEY REFERENCES Module(moduleID),
-	empID INT FOREIGN KEY REFERENCES Employee(empID)
 )
 --Table for classes employees instructors (Class Instructors) 
 CREATE TABLE Employee_Class (
