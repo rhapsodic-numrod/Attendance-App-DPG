@@ -58,6 +58,12 @@
     <Compile Include="AdminForms\AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\UpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\UpdateUser.Designer.cs">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\UpdateUser.resx">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
