@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Attendance_App.AdminForms;
 
 namespace Attendance_App
 {
@@ -31,6 +32,10 @@ namespace Attendance_App
             else if (Role == 3) //Admin
             {
                 MessageBox.Show("Welcome back " + txtBoxID.Text);
+                //Close the login form and go to the admin home form
+                AdminMainForm adminHome = new AdminMainForm();
+                this.Hide();
+                adminHome.Show();
             }
         }
         #region Role radio selection
