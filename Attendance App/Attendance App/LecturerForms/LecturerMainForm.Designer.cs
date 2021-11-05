@@ -32,8 +32,8 @@ namespace Attendance_App.LecturerForms
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelClassesSubMenu = new System.Windows.Forms.Panel();
             this.btnAddStudentGrades = new System.Windows.Forms.Button();
-            this.btnUpdateUser = new System.Windows.Forms.Button();
-            this.btnAddUser = new System.Windows.Forms.Button();
+            this.btnViewClassAttendance = new System.Windows.Forms.Button();
+            this.btnViewClasses = new System.Windows.Forms.Button();
             this.btnClasses = new System.Windows.Forms.Button();
             this.panelAccountSubMenu = new System.Windows.Forms.Panel();
             this.btnUpdateAccount = new System.Windows.Forms.Button();
@@ -68,8 +68,8 @@ namespace Attendance_App.LecturerForms
             // 
             this.panelClassesSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(109)))), ((int)(((byte)(122)))));
             this.panelClassesSubMenu.Controls.Add(this.btnAddStudentGrades);
-            this.panelClassesSubMenu.Controls.Add(this.btnUpdateUser);
-            this.panelClassesSubMenu.Controls.Add(this.btnAddUser);
+            this.panelClassesSubMenu.Controls.Add(this.btnViewClassAttendance);
+            this.panelClassesSubMenu.Controls.Add(this.btnViewClasses);
             this.panelClassesSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelClassesSubMenu.Location = new System.Drawing.Point(0, 404);
             this.panelClassesSubMenu.Name = "panelClassesSubMenu";
@@ -91,36 +91,39 @@ namespace Attendance_App.LecturerForms
             this.btnAddStudentGrades.Text = "Add Student Grades";
             this.btnAddStudentGrades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddStudentGrades.UseVisualStyleBackColor = true;
+            this.btnAddStudentGrades.Click += new System.EventHandler(this.btnAddStudentGrades_Click);
             // 
-            // btnUpdateUser
+            // btnViewClassAttendance
             // 
-            this.btnUpdateUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUpdateUser.FlatAppearance.BorderSize = 0;
-            this.btnUpdateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateUser.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateUser.Location = new System.Drawing.Point(0, 40);
-            this.btnUpdateUser.Name = "btnUpdateUser";
-            this.btnUpdateUser.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUpdateUser.Size = new System.Drawing.Size(240, 40);
-            this.btnUpdateUser.TabIndex = 1;
-            this.btnUpdateUser.Text = "View Class Attendance";
-            this.btnUpdateUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateUser.UseVisualStyleBackColor = true;
+            this.btnViewClassAttendance.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewClassAttendance.FlatAppearance.BorderSize = 0;
+            this.btnViewClassAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewClassAttendance.ForeColor = System.Drawing.Color.White;
+            this.btnViewClassAttendance.Location = new System.Drawing.Point(0, 40);
+            this.btnViewClassAttendance.Name = "btnViewClassAttendance";
+            this.btnViewClassAttendance.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnViewClassAttendance.Size = new System.Drawing.Size(240, 40);
+            this.btnViewClassAttendance.TabIndex = 1;
+            this.btnViewClassAttendance.Text = "View Class Attendance";
+            this.btnViewClassAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewClassAttendance.UseVisualStyleBackColor = true;
+            this.btnViewClassAttendance.Click += new System.EventHandler(this.btnViewClassAttendance_Click);
             // 
-            // btnAddUser
+            // btnViewClasses
             // 
-            this.btnAddUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddUser.FlatAppearance.BorderSize = 0;
-            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddUser.Location = new System.Drawing.Point(0, 0);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAddUser.Size = new System.Drawing.Size(240, 40);
-            this.btnAddUser.TabIndex = 0;
-            this.btnAddUser.Text = "View Classes";
-            this.btnAddUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnViewClasses.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewClasses.FlatAppearance.BorderSize = 0;
+            this.btnViewClasses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewClasses.ForeColor = System.Drawing.Color.White;
+            this.btnViewClasses.Location = new System.Drawing.Point(0, 0);
+            this.btnViewClasses.Name = "btnViewClasses";
+            this.btnViewClasses.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnViewClasses.Size = new System.Drawing.Size(240, 40);
+            this.btnViewClasses.TabIndex = 0;
+            this.btnViewClasses.Text = "View Classes";
+            this.btnViewClasses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewClasses.UseVisualStyleBackColor = true;
+            this.btnViewClasses.Click += new System.EventHandler(this.btnViewClasses_Click);
             // 
             // btnClasses
             // 
@@ -166,6 +169,7 @@ namespace Attendance_App.LecturerForms
             this.btnUpdateAccount.Text = "Update Account";
             this.btnUpdateAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdateAccount.UseVisualStyleBackColor = true;
+            this.btnUpdateAccount.Click += new System.EventHandler(this.btnUpdateAccount_Click_1);
             // 
             // btnViewAccount
             // 
@@ -181,6 +185,7 @@ namespace Attendance_App.LecturerForms
             this.btnViewAccount.Text = "View Account";
             this.btnViewAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnViewAccount.UseVisualStyleBackColor = true;
+            this.btnViewAccount.Click += new System.EventHandler(this.btnViewAccount_Click_1);
             // 
             // btnAccount
             // 
@@ -259,8 +264,8 @@ namespace Attendance_App.LecturerForms
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelClassesSubMenu;
         private System.Windows.Forms.Button btnAddStudentGrades;
-        private System.Windows.Forms.Button btnUpdateUser;
-        private System.Windows.Forms.Button btnAddUser;
+        private System.Windows.Forms.Button btnViewClassAttendance;
+        private System.Windows.Forms.Button btnViewClasses;
         private System.Windows.Forms.Button btnClasses;
         private System.Windows.Forms.Panel panelAccountSubMenu;
         private System.Windows.Forms.Button btnUpdateAccount;

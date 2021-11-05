@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Attendance_App.AppClasses;
 
 namespace Attendance_App.LecturerForms
 {
@@ -59,6 +60,41 @@ namespace Attendance_App.LecturerForms
         private void btnClasses_Click(object sender, EventArgs e)
         {
             showSubMenu(panelClassesSubMenu);
+        }
+        #endregion
+
+        ChildForms form = new ChildForms();
+        #region Account Sub Menu Options
+        private void btnViewAccount_Click_1(object sender, EventArgs e)
+        {
+            form.openChildForm(new ViewAccount(), panelInnerForms);
+            hideSubMenu();
+        }
+        private void btnUpdateAccount_Click_1(object sender, EventArgs e)
+        {
+            form.openChildForm(new UpdateAccount(), panelInnerForms);
+            hideSubMenu();
+        }
+
+        #endregion
+
+        #region Classes Sub Menu Options
+        private void btnViewClasses_Click(object sender, EventArgs e)
+        {
+            form.openChildForm(new ViewClasses(), panelInnerForms);
+            hideSubMenu();
+        }
+
+        private void btnViewClassAttendance_Click(object sender, EventArgs e)
+        {
+            form.openChildForm(new ViewClassAttendance(), panelInnerForms);
+            hideSubMenu();
+        }
+
+        private void btnAddStudentGrades_Click(object sender, EventArgs e)
+        {
+            form.openChildForm(new AddStudentGrades(), panelInnerForms);
+            hideSubMenu();
         }
         #endregion
     }
