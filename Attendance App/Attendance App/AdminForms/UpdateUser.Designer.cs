@@ -31,13 +31,24 @@ namespace Attendance_App.AdminForms
         {
             this.updateUserText = new System.Windows.Forms.Label();
             this.panelUpdateBox = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxUserID = new System.Windows.Forms.TextBox();
             this.radioAdmin = new System.Windows.Forms.RadioButton();
             this.radioLecturer = new System.Windows.Forms.RadioButton();
             this.radioStudent = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblEnterUserID = new System.Windows.Forms.Label();
             this.btnCloseForm = new System.Windows.Forms.Button();
             this.btnUpdateUser = new System.Windows.Forms.Button();
+            this.tx = new System.Windows.Forms.TextBox();
+            this.lblMName = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblLName = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtBoxFName = new System.Windows.Forms.TextBox();
+            this.lblFname = new System.Windows.Forms.Label();
+            this.btnGetUserInfo = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblMobileNumber = new System.Windows.Forms.Label();
             this.panelUpdateBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,23 +66,33 @@ namespace Attendance_App.AdminForms
             // 
             this.panelUpdateBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(168)))), ((int)(((byte)(172)))));
             this.panelUpdateBox.Controls.Add(this.textBox1);
+            this.panelUpdateBox.Controls.Add(this.lblMobileNumber);
+            this.panelUpdateBox.Controls.Add(this.btnGetUserInfo);
+            this.panelUpdateBox.Controls.Add(this.txtBoxFName);
+            this.panelUpdateBox.Controls.Add(this.lblFname);
+            this.panelUpdateBox.Controls.Add(this.textBox3);
+            this.panelUpdateBox.Controls.Add(this.lblEmail);
+            this.panelUpdateBox.Controls.Add(this.textBox2);
+            this.panelUpdateBox.Controls.Add(this.lblLName);
+            this.panelUpdateBox.Controls.Add(this.tx);
+            this.panelUpdateBox.Controls.Add(this.lblMName);
+            this.panelUpdateBox.Controls.Add(this.txtBoxUserID);
             this.panelUpdateBox.Controls.Add(this.radioAdmin);
             this.panelUpdateBox.Controls.Add(this.radioLecturer);
             this.panelUpdateBox.Controls.Add(this.radioStudent);
-            this.panelUpdateBox.Controls.Add(this.label1);
+            this.panelUpdateBox.Controls.Add(this.lblEnterUserID);
             this.panelUpdateBox.Location = new System.Drawing.Point(93, 119);
             this.panelUpdateBox.Name = "panelUpdateBox";
             this.panelUpdateBox.Size = new System.Drawing.Size(560, 406);
             this.panelUpdateBox.TabIndex = 1;
             // 
-            // label1
+            // txtBoxUserID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(86, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Enter user ID:";
+            this.txtBoxUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxUserID.Location = new System.Drawing.Point(198, 77);
+            this.txtBoxUserID.Name = "txtBoxUserID";
+            this.txtBoxUserID.Size = new System.Drawing.Size(189, 24);
+            this.txtBoxUserID.TabIndex = 16;
             // 
             // radioAdmin
             // 
@@ -106,12 +127,14 @@ namespace Attendance_App.AdminForms
             this.radioStudent.Text = "Student";
             this.radioStudent.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // lblEnterUserID
             // 
-            this.textBox1.Location = new System.Drawing.Point(187, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(281, 23);
-            this.textBox1.TabIndex = 16;
+            this.lblEnterUserID.AutoSize = true;
+            this.lblEnterUserID.Location = new System.Drawing.Point(86, 80);
+            this.lblEnterUserID.Name = "lblEnterUserID";
+            this.lblEnterUserID.Size = new System.Drawing.Size(95, 17);
+            this.lblEnterUserID.TabIndex = 0;
+            this.lblEnterUserID.Text = "Enter user ID:";
             // 
             // btnCloseForm
             // 
@@ -128,7 +151,7 @@ namespace Attendance_App.AdminForms
             // 
             // btnUpdateUser
             // 
-            this.btnUpdateUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(180)))), ((int)(((byte)(189)))));
+            this.btnUpdateUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(106)))), ((int)(((byte)(108)))));
             this.btnUpdateUser.FlatAppearance.BorderSize = 0;
             this.btnUpdateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -139,6 +162,105 @@ namespace Attendance_App.AdminForms
             this.btnUpdateUser.TabIndex = 11;
             this.btnUpdateUser.Text = "Update User";
             this.btnUpdateUser.UseVisualStyleBackColor = false;
+            // 
+            // tx
+            // 
+            this.tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tx.Location = new System.Drawing.Point(198, 184);
+            this.tx.Name = "tx";
+            this.tx.Size = new System.Drawing.Size(281, 24);
+            this.tx.TabIndex = 19;
+            // 
+            // lblMName
+            // 
+            this.lblMName.AutoSize = true;
+            this.lblMName.Location = new System.Drawing.Point(86, 187);
+            this.lblMName.Name = "lblMName";
+            this.lblMName.Size = new System.Drawing.Size(94, 17);
+            this.lblMName.TabIndex = 18;
+            this.lblMName.Text = "Middle Name:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(198, 233);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(281, 24);
+            this.textBox2.TabIndex = 21;
+            // 
+            // lblLName
+            // 
+            this.lblLName.AutoSize = true;
+            this.lblLName.Location = new System.Drawing.Point(86, 236);
+            this.lblLName.Name = "lblLName";
+            this.lblLName.Size = new System.Drawing.Size(80, 17);
+            this.lblLName.TabIndex = 20;
+            this.lblLName.Text = "Last Name:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(198, 284);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(281, 24);
+            this.textBox3.TabIndex = 23;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(86, 287);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(94, 17);
+            this.lblEmail.TabIndex = 22;
+            this.lblEmail.Text = "Email Adress:";
+            // 
+            // txtBoxFName
+            // 
+            this.txtBoxFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxFName.Location = new System.Drawing.Point(198, 130);
+            this.txtBoxFName.Name = "txtBoxFName";
+            this.txtBoxFName.Size = new System.Drawing.Size(281, 24);
+            this.txtBoxFName.TabIndex = 25;
+            // 
+            // lblFname
+            // 
+            this.lblFname.AutoSize = true;
+            this.lblFname.Location = new System.Drawing.Point(86, 133);
+            this.lblFname.Name = "lblFname";
+            this.lblFname.Size = new System.Drawing.Size(80, 17);
+            this.lblFname.TabIndex = 24;
+            this.lblFname.Text = "First Name:";
+            // 
+            // btnGetUserInfo
+            // 
+            this.btnGetUserInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(180)))), ((int)(((byte)(189)))));
+            this.btnGetUserInfo.FlatAppearance.BorderSize = 0;
+            this.btnGetUserInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetUserInfo.ForeColor = System.Drawing.Color.White;
+            this.btnGetUserInfo.Location = new System.Drawing.Point(419, 70);
+            this.btnGetUserInfo.Name = "btnGetUserInfo";
+            this.btnGetUserInfo.Size = new System.Drawing.Size(76, 40);
+            this.btnGetUserInfo.TabIndex = 26;
+            this.btnGetUserInfo.Text = "Get Info";
+            this.btnGetUserInfo.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(198, 333);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(281, 24);
+            this.textBox1.TabIndex = 28;
+            // 
+            // lblMobileNumber
+            // 
+            this.lblMobileNumber.AutoSize = true;
+            this.lblMobileNumber.Location = new System.Drawing.Point(86, 336);
+            this.lblMobileNumber.Name = "lblMobileNumber";
+            this.lblMobileNumber.Size = new System.Drawing.Size(107, 17);
+            this.lblMobileNumber.TabIndex = 27;
+            this.lblMobileNumber.Text = "Mobile Number:";
             // 
             // UpdateUser
             // 
@@ -152,7 +274,7 @@ namespace Attendance_App.AdminForms
             this.Controls.Add(this.updateUserText);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateUser";
             this.Text = "UpdateUser";
             this.panelUpdateBox.ResumeLayout(false);
@@ -166,12 +288,23 @@ namespace Attendance_App.AdminForms
 
         private System.Windows.Forms.Label updateUserText;
         private System.Windows.Forms.Panel panelUpdateBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblEnterUserID;
+        private System.Windows.Forms.TextBox txtBoxUserID;
         private System.Windows.Forms.RadioButton radioAdmin;
         private System.Windows.Forms.RadioButton radioLecturer;
         private System.Windows.Forms.RadioButton radioStudent;
         private System.Windows.Forms.Button btnCloseForm;
         private System.Windows.Forms.Button btnUpdateUser;
+        private System.Windows.Forms.TextBox txtBoxFName;
+        private System.Windows.Forms.Label lblFname;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblLName;
+        private System.Windows.Forms.TextBox tx;
+        private System.Windows.Forms.Label lblMName;
+        private System.Windows.Forms.Button btnGetUserInfo;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblMobileNumber;
     }
 }
