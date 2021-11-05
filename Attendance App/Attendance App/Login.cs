@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Attendance_App.AdminForms;
+using Attendance_App.LecturerForms;
 
 namespace Attendance_App
 {
@@ -28,6 +29,9 @@ namespace Attendance_App
             else if (Role == 2) //Lecturer
             {
                 MessageBox.Show("Welcome back " + txtBoxID.Text);
+                LecturerMainForm lecturerHome = new LecturerMainForm();
+                this.Hide();
+                lecturerHome.Show();
             }
             else if (Role == 3) //Admin
             {
@@ -54,17 +58,20 @@ namespace Attendance_App
             Role = 3;
         }
         #endregion
-
-        private void checkBoxViewPassword_CheckedChanged(object sender, EventArgs e)
+        private void changePasswordChar(TextBox txtBox)
         {
-            if (txtBoxPassword.PasswordChar == '*')
+            if (txtBox.PasswordChar == '*')
             {
-                txtBoxPassword.PasswordChar = '\0'; //if you will see the password as text instead of a *
+                txtBox.PasswordChar = '\0'; //if you will see the password as text instead of a *
             }
             else
             {
-                txtBoxPassword.PasswordChar = '*';
+                txtBox.PasswordChar = '*';
             }
+        }
+        private void checkBoxViewPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            changePasswordChar(txtBoxPassword);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
