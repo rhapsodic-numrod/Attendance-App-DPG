@@ -91,6 +91,7 @@ namespace Attendance_App.AdminForms
             this.btnSearchUser.Text = "Search User";
             this.btnSearchUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearchUser.UseVisualStyleBackColor = true;
+            this.btnSearchUser.Click += new System.EventHandler(this.btnSearchUser_Click);
             // 
             // btnUpdateUser
             // 
@@ -106,6 +107,7 @@ namespace Attendance_App.AdminForms
             this.btnUpdateUser.Text = "Update User";
             this.btnUpdateUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdateUser.UseVisualStyleBackColor = true;
+            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
             // 
             // btnAddUser
             // 
@@ -121,6 +123,7 @@ namespace Attendance_App.AdminForms
             this.btnAddUser.Text = "Add User";
             this.btnAddUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // btnUsers
             // 
@@ -166,6 +169,7 @@ namespace Attendance_App.AdminForms
             this.btnUpdateAccount.Text = "Update Account";
             this.btnUpdateAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdateAccount.UseVisualStyleBackColor = true;
+            this.btnUpdateAccount.Click += new System.EventHandler(this.btnUpdateAccount_Click);
             // 
             // btnViewAccount
             // 
@@ -181,6 +185,7 @@ namespace Attendance_App.AdminForms
             this.btnViewAccount.Text = "View Account";
             this.btnViewAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnViewAccount.UseVisualStyleBackColor = true;
+            this.btnViewAccount.Click += new System.EventHandler(this.btnViewAccount_Click);
             // 
             // btnAccount
             // 
