@@ -58,11 +58,23 @@
     <Compile Include="AdminForms\AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForms\SearchUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminForms\SearchUser.Designer.cs">
       <DependentUpon>SearchUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\UpdateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\UpdateAccount.Designer.cs">
+      <DependentUpon>UpdateAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForms\UpdateUser.cs">
       <SubType>Form</SubType>
@@ -90,8 +102,14 @@
     <EmbeddedResource Include="AdminForms\AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\SearchUser.resx">
       <DependentUpon>SearchUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\UpdateAccount.resx">
+      <DependentUpon>UpdateAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\UpdateUser.resx">
       <DependentUpon>UpdateUser.cs</DependentUpon>
