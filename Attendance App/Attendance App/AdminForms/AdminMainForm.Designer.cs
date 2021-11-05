@@ -41,6 +41,7 @@ namespace Attendance_App.AdminForms
             this.btnAddUser = new System.Windows.Forms.Button();
             this.panelUsersSubMenu = new System.Windows.Forms.Panel();
             this.btnSearchUser = new System.Windows.Forms.Button();
+            this.panelInnerForms = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
             this.panelAccountSubMenu.SuspendLayout();
             this.panelUsersSubMenu.SuspendLayout();
@@ -60,7 +61,7 @@ namespace Attendance_App.AdminForms
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(245, 611);
+            this.panelSideMenu.Size = new System.Drawing.Size(240, 611);
             this.panelSideMenu.TabIndex = 0;
             // 
             // panelLogo
@@ -69,7 +70,7 @@ namespace Attendance_App.AdminForms
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(245, 159);
+            this.panelLogo.Size = new System.Drawing.Size(240, 159);
             this.panelLogo.TabIndex = 0;
             // 
             // btnHome
@@ -83,7 +84,7 @@ namespace Attendance_App.AdminForms
             this.btnHome.Location = new System.Drawing.Point(0, 159);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(245, 50);
+            this.btnHome.Size = new System.Drawing.Size(240, 50);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -100,7 +101,7 @@ namespace Attendance_App.AdminForms
             this.btnAccount.Location = new System.Drawing.Point(0, 209);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAccount.Size = new System.Drawing.Size(245, 50);
+            this.btnAccount.Size = new System.Drawing.Size(240, 50);
             this.btnAccount.TabIndex = 2;
             this.btnAccount.Text = "Account";
             this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -114,7 +115,7 @@ namespace Attendance_App.AdminForms
             this.panelAccountSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAccountSubMenu.Location = new System.Drawing.Point(0, 259);
             this.panelAccountSubMenu.Name = "panelAccountSubMenu";
-            this.panelAccountSubMenu.Size = new System.Drawing.Size(245, 95);
+            this.panelAccountSubMenu.Size = new System.Drawing.Size(240, 95);
             this.panelAccountSubMenu.TabIndex = 3;
             // 
             // btnViewAccount
@@ -126,7 +127,7 @@ namespace Attendance_App.AdminForms
             this.btnViewAccount.Location = new System.Drawing.Point(0, 0);
             this.btnViewAccount.Name = "btnViewAccount";
             this.btnViewAccount.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnViewAccount.Size = new System.Drawing.Size(245, 40);
+            this.btnViewAccount.Size = new System.Drawing.Size(240, 40);
             this.btnViewAccount.TabIndex = 0;
             this.btnViewAccount.Text = "View Account";
             this.btnViewAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,7 +142,7 @@ namespace Attendance_App.AdminForms
             this.btnUpdateAccount.Location = new System.Drawing.Point(0, 40);
             this.btnUpdateAccount.Name = "btnUpdateAccount";
             this.btnUpdateAccount.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUpdateAccount.Size = new System.Drawing.Size(245, 40);
+            this.btnUpdateAccount.Size = new System.Drawing.Size(240, 40);
             this.btnUpdateAccount.TabIndex = 1;
             this.btnUpdateAccount.Text = "Update Account";
             this.btnUpdateAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -158,7 +159,7 @@ namespace Attendance_App.AdminForms
             this.btnUsers.Location = new System.Drawing.Point(0, 354);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnUsers.Size = new System.Drawing.Size(245, 50);
+            this.btnUsers.Size = new System.Drawing.Size(240, 50);
             this.btnUsers.TabIndex = 4;
             this.btnUsers.Text = "Users";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -173,7 +174,7 @@ namespace Attendance_App.AdminForms
             this.btnUpdateUser.Location = new System.Drawing.Point(0, 40);
             this.btnUpdateUser.Name = "btnUpdateUser";
             this.btnUpdateUser.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUpdateUser.Size = new System.Drawing.Size(245, 40);
+            this.btnUpdateUser.Size = new System.Drawing.Size(240, 40);
             this.btnUpdateUser.TabIndex = 1;
             this.btnUpdateUser.Text = "Update User";
             this.btnUpdateUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,7 +189,7 @@ namespace Attendance_App.AdminForms
             this.btnAddUser.Location = new System.Drawing.Point(0, 0);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAddUser.Size = new System.Drawing.Size(245, 40);
+            this.btnAddUser.Size = new System.Drawing.Size(240, 40);
             this.btnAddUser.TabIndex = 0;
             this.btnAddUser.Text = "Add User";
             this.btnAddUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,7 +204,7 @@ namespace Attendance_App.AdminForms
             this.panelUsersSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUsersSubMenu.Location = new System.Drawing.Point(0, 404);
             this.panelUsersSubMenu.Name = "panelUsersSubMenu";
-            this.panelUsersSubMenu.Size = new System.Drawing.Size(245, 124);
+            this.panelUsersSubMenu.Size = new System.Drawing.Size(240, 124);
             this.panelUsersSubMenu.TabIndex = 5;
             // 
             // btnSearchUser
@@ -215,11 +216,19 @@ namespace Attendance_App.AdminForms
             this.btnSearchUser.Location = new System.Drawing.Point(0, 80);
             this.btnSearchUser.Name = "btnSearchUser";
             this.btnSearchUser.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSearchUser.Size = new System.Drawing.Size(245, 40);
+            this.btnSearchUser.Size = new System.Drawing.Size(240, 40);
             this.btnSearchUser.TabIndex = 2;
             this.btnSearchUser.Text = "Search User";
             this.btnSearchUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearchUser.UseVisualStyleBackColor = true;
+            // 
+            // panelInnerForms
+            // 
+            this.panelInnerForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelInnerForms.Location = new System.Drawing.Point(240, 0);
+            this.panelInnerForms.Name = "panelInnerForms";
+            this.panelInnerForms.Size = new System.Drawing.Size(644, 611);
+            this.panelInnerForms.TabIndex = 1;
             // 
             // AdminMainForm
             // 
@@ -227,6 +236,7 @@ namespace Attendance_App.AdminForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(884, 611);
+            this.Controls.Add(this.panelInnerForms);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -253,5 +263,6 @@ namespace Attendance_App.AdminForms
         private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Panel panelInnerForms;
     }
 }
