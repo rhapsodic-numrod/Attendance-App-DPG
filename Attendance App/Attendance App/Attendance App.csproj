@@ -88,6 +88,7 @@
     <Compile Include="AdminForms\ViewAccount.Designer.cs">
       <DependentUpon>ViewAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppClasses\ChildForms.cs" />
     <Compile Include="LecturerForms\LecturerMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
