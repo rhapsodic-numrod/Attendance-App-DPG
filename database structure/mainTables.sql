@@ -1,11 +1,15 @@
 USE master
 GO
+--if the db exist drop it before it is altered
+DROP DATABASE IF EXISTS attendanceDatabase
+GO
 --CREATE DATABASE
 CREATE DATABASE attendanceDatabase
 GO
 USE attendanceDatabase
 GO
 --CREATE BASE TABLES IN DATABASE
+--############# Independendent #############
 CREATE TABLE Student(
 	studentID INT PRIMARY KEY NOT NULL,
 	firstName VARCHAR(50) NOT NULL,
@@ -27,8 +31,8 @@ CREATE TABLE Exam(
 	examID INT PRIMARY KEY NOT NULL,
 	examName VARCHAR(10)
 )
-CREATE TABLE Class(
-	classID INT PRIMARY KEY NOT NULL,
+CREATE TABLE ClassType(
+	typeID INT PRIMARY KEY NOT NULL,
 	className VARCHAR(10)
 )
 CREATE TABLE Employee(
@@ -43,4 +47,11 @@ CREATE TABLE Employee(
 CREATE TABLE Attendance(
 	attendanceID INT PRIMARY KEY NOT NULL,
 	attendanceStatus BIT
+)
+--############# Partially dependendent #############
+CREATE TABLE Class(
+	classID INT PRIMARY KEY NOT NULL,
+	moduleID INT FOREIGN KEY REFERENCES Module(moduleID),
+	classTypeID INT FOREIGN KEY REFERENCES ClassType(typeID),
+	className VARCHAR(10)
 )
