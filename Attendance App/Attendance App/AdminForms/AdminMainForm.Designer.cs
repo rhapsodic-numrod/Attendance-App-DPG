@@ -232,7 +232,7 @@ namespace Attendance_App.AdminForms
             this.panelInnerForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInnerForms.Location = new System.Drawing.Point(240, 0);
             this.panelInnerForms.Name = "panelInnerForms";
-            this.panelInnerForms.Size = new System.Drawing.Size(644, 611);
+            this.panelInnerForms.Size = new System.Drawing.Size(744, 611);
             this.panelInnerForms.TabIndex = 1;
             // 
             // AdminMainForm
@@ -240,7 +240,7 @@ namespace Attendance_App.AdminForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(884, 611);
+            this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.panelInnerForms);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
