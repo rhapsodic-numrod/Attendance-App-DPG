@@ -89,11 +89,29 @@
       <DependentUpon>ViewAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="AppClasses\ChildForms.cs" />
+    <Compile Include="LecturerForms\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerForms\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="LecturerForms\LecturerMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LecturerForms\LecturerMainForm.Designer.cs">
       <DependentUpon>LecturerMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecturerForms\UpdateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerForms\UpdateAccount.Designer.cs">
+      <DependentUpon>UpdateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecturerForms\ViewAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerForms\ViewAccount.Designer.cs">
+      <DependentUpon>ViewAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -124,8 +142,17 @@
     <EmbeddedResource Include="AdminForms\ViewAccount.resx">
       <DependentUpon>ViewAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LecturerForms\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LecturerForms\LecturerMainForm.resx">
       <DependentUpon>LecturerMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturerForms\UpdateAccount.resx">
+      <DependentUpon>UpdateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturerForms\ViewAccount.resx">
+      <DependentUpon>ViewAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
