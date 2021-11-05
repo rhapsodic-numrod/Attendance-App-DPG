@@ -113,6 +113,12 @@
     <Compile Include="LecturerForms\ViewAccount.Designer.cs">
       <DependentUpon>ViewAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="LecturerForms\ViewClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerForms\ViewClasses.Designer.cs">
+      <DependentUpon>ViewClasses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LecturerForms\ViewAccount.resx">
       <DependentUpon>ViewAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturerForms\ViewClasses.resx">
+      <DependentUpon>ViewClasses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
