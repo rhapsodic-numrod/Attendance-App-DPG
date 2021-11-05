@@ -88,6 +88,12 @@
     <Compile Include="AdminForms\ViewAccount.Designer.cs">
       <DependentUpon>ViewAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="LecturerForms\LecturerMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerForms\LecturerMainForm.Designer.cs">
+      <DependentUpon>LecturerMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <EmbeddedResource Include="AdminForms\ViewAccount.resx">
       <DependentUpon>ViewAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LecturerForms\LecturerMainForm.resx">
+      <DependentUpon>LecturerMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,7 +152,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="LecturerForms\" />
     <Folder Include="StudentForms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
