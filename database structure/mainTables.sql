@@ -1,7 +1,14 @@
 USE master
 GO
---if the db exist drop it before it is altered
-DROP DATABASE IF EXISTS attendanceDatabase
+-- Uncomment the ALTER DATABASE statement below to set the database to SINGLE_USER mode if the drop database command fails because the database is in use.
+ALTER DATABASE attendanceDatabase SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+-- Drop the database if it exists
+IF EXISTS (
+    SELECT [name]
+        FROM sys.databases
+        WHERE [name] = N'attendanceDatabase'
+)
+DROP DATABASE attendanceDatabase
 GO
 --CREATE DATABASE
 CREATE DATABASE attendanceDatabase
@@ -11,7 +18,7 @@ GO
 --CREATE BASE TABLES IN DATABASE
 --############# Independendent #############
 CREATE TABLE Student(
-	studentID INT PRIMARY KEY NOT NULL,
+	studentID VARCHAR(50) PRIMARY KEY NOT NULL,
 	firstName VARCHAR(50) NOT NULL,
 	middleName VARCHAR(50),
 	lastName VARCHAR(50) NOT NULL,
@@ -36,7 +43,7 @@ CREATE TABLE ClassType(
 	className VARCHAR(10)
 )
 CREATE TABLE Employee(
-	empID INT PRIMARY KEY NOT NULL,
+	empID VARCHAR(50) PRIMARY KEY NOT NULL,
 	firstName VARCHAR(50) NOT NULL,
 	middleName VARCHAR(50),
 	lastName VARCHAR(50) NOT NULL,
@@ -55,3 +62,7 @@ CREATE TABLE Class(
 	classTypeID INT FOREIGN KEY REFERENCES ClassType(typeID),
 	className VARCHAR(10)
 )
+-- Adding roles and classtypes to tables
+INSERT INTO ClassType(typeID, className) VALUES(1,'Theory'), (2, 'Practival')
+INSERT INTO Roles(roleID, roleName) VALUES(1,'Student'), (2, 'Lecturer'), (3, 'Admin')
+INSERT INTO Attendance(attendanceID, attendanceStatus) VALUES (1,1), (2,0)
