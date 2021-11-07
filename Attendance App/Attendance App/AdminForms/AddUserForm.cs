@@ -69,9 +69,8 @@ namespace Attendance_App.AdminForms
                 {
                     conn.Open();
                 }
-                addUserCommand.ExecuteNonQuery(); //read whats in the output paramaters
-                string outputValue = addUserCommand.Parameters["@result"].Value.ToString(); //store the value in the output parameter
                 int rowsAffected = addUserCommand.ExecuteNonQuery();
+                string outputValue = addUserCommand.Parameters["@result"].Value.ToString(); //store the value in the output parameter
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show(outputValue);
