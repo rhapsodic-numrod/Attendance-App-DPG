@@ -31,9 +31,9 @@ namespace Attendance_App.AdminForms
         {
             this.SearchText = new System.Windows.Forms.Label();
             this.panelSearchBox = new System.Windows.Forms.Panel();
-            this.txtBoxSearchParam = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtBoxSearchParam = new System.Windows.Forms.TextBox();
             this.btnCloseForm = new System.Windows.Forms.Button();
             this.panelSearchBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,13 +65,13 @@ namespace Attendance_App.AdminForms
             this.panelSearchBox.Size = new System.Drawing.Size(587, 419);
             this.panelSearchBox.TabIndex = 1;
             // 
-            // txtBoxSearchParam
+            // dataGridView1
             // 
-            this.txtBoxSearchParam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBoxSearchParam.Location = new System.Drawing.Point(79, 44);
-            this.txtBoxSearchParam.Name = "txtBoxSearchParam";
-            this.txtBoxSearchParam.Size = new System.Drawing.Size(324, 23);
-            this.txtBoxSearchParam.TabIndex = 0;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(122, 107);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(365, 258);
+            this.dataGridView1.TabIndex = 2;
             // 
             // btnSearch
             // 
@@ -87,13 +87,13 @@ namespace Attendance_App.AdminForms
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // txtBoxSearchParam
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(122, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(365, 258);
-            this.dataGridView1.TabIndex = 2;
+            this.txtBoxSearchParam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBoxSearchParam.Location = new System.Drawing.Point(79, 44);
+            this.txtBoxSearchParam.Name = "txtBoxSearchParam";
+            this.txtBoxSearchParam.Size = new System.Drawing.Size(324, 23);
+            this.txtBoxSearchParam.TabIndex = 0;
             // 
             // btnCloseForm
             // 
@@ -108,6 +108,7 @@ namespace Attendance_App.AdminForms
             this.btnCloseForm.TabIndex = 10;
             this.btnCloseForm.Text = "✖";
             this.btnCloseForm.UseVisualStyleBackColor = false;
+            this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
             // 
             // SearchUser
             // 
@@ -120,7 +121,7 @@ namespace Attendance_App.AdminForms
             this.Controls.Add(this.SearchText);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SearchUser";
             this.Text = "SearchUser";
             this.panelSearchBox.ResumeLayout(false);

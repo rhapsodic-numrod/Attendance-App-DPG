@@ -180,11 +180,11 @@
     <Compile Include="StudentForms\UpdateAccount.Designer.cs">
       <DependentUpon>UpdateAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentForms\ViewClasses.cs">
+    <Compile Include="StudentForms\ViewAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentForms\ViewClasses.Designer.cs">
-      <DependentUpon>ViewClasses.cs</DependentUpon>
+    <Compile Include="StudentForms\ViewAccount.designer.cs">
+      <DependentUpon>ViewAccount.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminForms\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
@@ -240,8 +240,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentForms\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentForms\StudentMainForm.resx">
       <DependentUpon>StudentMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForms\UpdateAccount.resx">
+      <DependentUpon>UpdateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForms\ViewAccount.resx">
+      <DependentUpon>ViewAccount.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AttendanceDatabaseDataSet.xsc">
       <DependentUpon>AttendanceDatabaseDataSet.xsd</DependentUpon>
