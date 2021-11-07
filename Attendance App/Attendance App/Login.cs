@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Data.SqlClient;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,10 +23,31 @@ namespace Attendance_App
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
+
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tenge\Documents\GitHub\Attendance-App-DPG\database structure\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
+            string query = "Select * from dbo.Login Where studentID = '" +txtBoxID.Text.Trim()+ "' and studentPassword = '" + txtBoxPassword.Text.Trim() + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
+            DataTable dtbl = new DataTable();
+            sda.Fill(dtbl);
+
+
             if (Role == 1) //Student
             {
-                MessageBox.Show("Welcome back " + txtBoxID.Text);
-            } 
+                if (dtbl.Rows.Count == 1)
+                {
+                    {
+                        MessageBox.Show("Welcome back " + txtBoxID.Text);
+                    }
+                    frmMain objfrmMain = new frmMain();
+                    this.Hide();
+                    objfrmMain.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Lol! Wrong Student ID or Password");
+                }
+                
+            }
             else if (Role == 2) //Lecturer
             {
                 MessageBox.Show("Welcome back " + txtBoxID.Text);
@@ -76,7 +98,9 @@ namespace Attendance_App
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
+            this.Close();
+            //Application.Exit();
         }
     }
 }
