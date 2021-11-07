@@ -66,3 +66,23 @@ CREATE TABLE Class(
 INSERT INTO ClassType(typeID, className) VALUES(1,'Theory'), (2, 'Practival')
 INSERT INTO Roles(roleID, roleName) VALUES(1,'Student'), (2, 'Lecturer'), (3, 'Admin')
 INSERT INTO Attendance(attendanceID, attendanceStatus) VALUES (1,1), (2,0)
+INSERT INTO Class(classID, className, classTypeID,moduleID)
+            VALUES(1,'DPG',1,1),
+                   (2,'DPG',2,1),
+                   (4,'PRG',1,2),
+                   (3,'PRG',2,2),
+                   (5,'COA',1,5),
+                   (6,'COA',2,5),
+                   (7,'DSA',1,4),
+                   (8,'DSA',2,4),
+                   (9,'MCI',1,3),
+                   (10,'EPR',1,6)
+GO
+
+INSERT INTO [Module](moduleID,moduleName)
+            VALUES(1, 'DPG621SS'),
+                  (2,'PRG510S'),
+                  (3,'MCI521S'),
+                  (4,'DSA521S'),
+                  (5,'COA511S'),
+                  (6,'EPR511S')
