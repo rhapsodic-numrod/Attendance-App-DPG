@@ -1,4 +1,4 @@
-CREATE PROCEDURE addStudent
+CREATE PROCEDURE dbo.addStudent
 @firstName VARCHAR(50),
 @middleName VARCHAR(50),
 @lastName VARCHAR(50),
@@ -49,7 +49,7 @@ BEGIN
 END
 
 GO
-CREATE PROCEDURE addLecturer
+CREATE PROCEDURE dbo.addLecturer
 @firstName VARCHAR(50),
 @middleName VARCHAR(50),
 @lastName VARCHAR(50),
@@ -99,7 +99,7 @@ BEGIN
 END
 
 GO
-CREATE PROCEDURE addAdmin
+CREATE PROCEDURE dbo.addAdmin
 @firstName VARCHAR(50),
 @middleName VARCHAR(50),
 @lastName VARCHAR(50),
