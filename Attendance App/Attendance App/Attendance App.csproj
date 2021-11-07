@@ -107,6 +107,7 @@
       <DependentUpon>ViewAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="AppClasses\ChildForms.cs" />
+    <Compile Include="AppClasses\CurrentLogin.cs" />
     <Compile Include="AttendanceDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -179,12 +180,6 @@
     </Compile>
     <Compile Include="StudentForms\UpdateAccount.Designer.cs">
       <DependentUpon>UpdateAccount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StudentForms\ViewClasses.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentForms\ViewClasses.Designer.cs">
-      <DependentUpon>ViewClasses.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminForms\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
