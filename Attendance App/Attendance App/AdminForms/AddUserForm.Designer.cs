@@ -95,6 +95,7 @@ namespace Attendance_App.AdminForms
             this.radioAdmin.TabStop = true;
             this.radioAdmin.Text = "Admin";
             this.radioAdmin.UseVisualStyleBackColor = true;
+            this.radioAdmin.CheckedChanged += new System.EventHandler(this.radioAdmin_CheckedChanged);
             // 
             // radioLecturer
             // 
@@ -106,10 +107,12 @@ namespace Attendance_App.AdminForms
             this.radioLecturer.TabStop = true;
             this.radioLecturer.Text = "Lecturer";
             this.radioLecturer.UseVisualStyleBackColor = true;
+            this.radioLecturer.CheckedChanged += new System.EventHandler(this.radioLecturer_CheckedChanged);
             // 
             // radioStudent
             // 
             this.radioStudent.AutoSize = true;
+            this.radioStudent.Checked = true;
             this.radioStudent.Location = new System.Drawing.Point(92, 357);
             this.radioStudent.Name = "radioStudent";
             this.radioStudent.Size = new System.Drawing.Size(75, 21);
@@ -117,6 +120,7 @@ namespace Attendance_App.AdminForms
             this.radioStudent.TabStop = true;
             this.radioStudent.Text = "Student";
             this.radioStudent.UseVisualStyleBackColor = true;
+            this.radioStudent.CheckedChanged += new System.EventHandler(this.radioStudent_CheckedChanged);
             // 
             // txtBoxMName
             // 
@@ -226,6 +230,7 @@ namespace Attendance_App.AdminForms
             this.btnAddUser.TabIndex = 2;
             this.btnAddUser.Text = "Add User";
             this.btnAddUser.UseVisualStyleBackColor = false;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // btnCloseForm
             // 
@@ -239,6 +244,7 @@ namespace Attendance_App.AdminForms
             this.btnCloseForm.TabIndex = 9;
             this.btnCloseForm.Text = "✖";
             this.btnCloseForm.UseVisualStyleBackColor = false;
+            this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
             // 
             // AddUserForm
             // 
