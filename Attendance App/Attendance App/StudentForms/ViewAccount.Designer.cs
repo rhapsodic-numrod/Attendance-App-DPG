@@ -1,7 +1,7 @@
 ﻿
-namespace Attendance_App
+namespace Attendance_App.StudentForms
 {
-    partial class frmMain
+    partial class ViewAccount
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,10 @@ namespace Attendance_App
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // frmMain
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 625);
-            this.Name = "frmMain";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "ViewAccount";
         }
 
         #endregion

@@ -38,9 +38,11 @@ namespace Attendance_App
                     {
                         MessageBox.Show("Welcome back " + txtBoxID.Text);
                     }
-                    frmMain objfrmMain = new frmMain();
+                    //FrmMain is a test screen to show that the login operation works.
+                    //Will need to change it to the student Main Screen afterwards.
+                    StudentForms.StudentMainForm objStudentMainForm = new StudentForms.StudentMainForm();
                     this.Hide();
-                    objfrmMain.Show();
+                    objStudentMainForm.Show();
                 }
                 else
                 {
@@ -68,16 +70,20 @@ namespace Attendance_App
         private void studentRadio_CheckedChanged(object sender, EventArgs e)
         {
             Role = 1;
+            label1.Text = "Student ID"; //Says Student Number on run. Just check that later
+
         }
 
         private void lecturerRadio_CheckedChanged(object sender, EventArgs e)
         {
             Role = 2;
+            label1.Text = "Employee ID";
         }
 
         private void adminRadio_CheckedChanged(object sender, EventArgs e)
         {
             Role = 3;
+            label1.Text = "Admin ID";
         }
         #endregion
         private void changePasswordChar(TextBox txtBox)
@@ -101,6 +107,11 @@ namespace Attendance_App
 
             this.Close();
             //Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

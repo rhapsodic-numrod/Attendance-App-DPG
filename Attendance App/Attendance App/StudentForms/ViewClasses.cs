@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Attendance_App
+namespace Attendance_App.StudentForms
 {
-    public partial class frmMain : Form
+    public partial class ViewClasses : Form
     {
-        public frmMain()
+        public ViewClasses()
         {
             InitializeComponent();
         }

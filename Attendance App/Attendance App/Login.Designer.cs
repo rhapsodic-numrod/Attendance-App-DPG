@@ -63,6 +63,7 @@ namespace Attendance_App
             this.label1.Size = new System.Drawing.Size(129, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Student Number:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
