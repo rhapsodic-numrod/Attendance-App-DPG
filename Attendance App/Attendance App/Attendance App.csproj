@@ -109,12 +109,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AttendanceDatabaseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="LecturerForms\AddStudentGrades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,12 +177,6 @@
     <Compile Include="StudentForms\UpdateAccount.Designer.cs">
       <DependentUpon>UpdateAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentForms\ViewAccount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentForms\ViewAccount.Designer.cs">
-      <DependentUpon>ViewAccount.cs</DependentUpon>
-    </Compile>
     <Compile Include="StudentForms\ViewClasses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,9 +203,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\ViewAccount.resx">
       <DependentUpon>ViewAccount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LecturerForms\AddStudentGrades.resx">
       <DependentUpon>AddStudentGrades.cs</DependentUpon>

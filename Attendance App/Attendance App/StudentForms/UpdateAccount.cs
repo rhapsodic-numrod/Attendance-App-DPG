@@ -16,5 +16,6 @@ namespace Attendance_App.StudentForms
         {
             InitializeComponent();
         }
+
     }
 }
