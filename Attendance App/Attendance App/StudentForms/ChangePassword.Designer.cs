@@ -1,6 +1,7 @@
-﻿namespace Attendance_App.StudentForms
+﻿
+namespace Attendance_App.StudentForms
 {
-    partial class StudentMainForm
+    partial class ChangePassword
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +32,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "StudentMainForm";
+            this.Text = "ChangePassword";
         }
 
         #endregion
