@@ -40,63 +40,70 @@ namespace Attendance_App
                 conn.Open();
             }
             //Create Command
-            if (txtBoxID.Text != "" && txtBoxPassword.Text != "")
+            if (adminRadio.Checked != false || studentRadio.Checked != false || lecturerRadio.Checked != false) //if any of the radio buttons are chosen
             {
-                string query = "LoginUser";
-                SqlCommand loginCommand = new SqlCommand(query, conn);
-                loginCommand.CommandType = CommandType.StoredProcedure;
-                //add COMMAND parameters
-                loginCommand.Parameters.AddWithValue("@userID", txtBoxID.Text);
-                loginCommand.Parameters.AddWithValue("@password", txtBoxPassword.Text);
-                loginCommand.Parameters.AddWithValue("@role", Role);
-                loginCommand.Parameters.Add("@result", SqlDbType.VarChar, 250); //specify output parameter
-                loginCommand.Parameters["@result"].Direction = ParameterDirection.Output;
-                //Creates a reader and executes command
-                SqlDataReader reader = loginCommand.ExecuteReader();
-                // If the reader finds a row
-                bool successfull = (reader.HasRows) ? true : false;
-                // Close reader
-                reader.Close();
-                string outputValue = loginCommand.Parameters["@result"].Value.ToString();
-                //I think this one is self explanatory
-                if (successfull)
+                if (txtBoxID.Text != "" && txtBoxPassword.Text != "")
                 {
-                    CurrentLogin.currentID = txtBoxID.Text;
-                    CurrentLogin.currentRole = Role;
-                    MessageBox.Show(outputValue);
-                    if (Role == 1) //Student
+                    string query = "LoginUser";
+                    SqlCommand loginCommand = new SqlCommand(query, conn);
+                    loginCommand.CommandType = CommandType.StoredProcedure;
+                    //add COMMAND parameters
+                    loginCommand.Parameters.AddWithValue("@userID", txtBoxID.Text);
+                    loginCommand.Parameters.AddWithValue("@password", txtBoxPassword.Text);
+                    loginCommand.Parameters.AddWithValue("@role", Role);
+                    loginCommand.Parameters.Add("@result", SqlDbType.VarChar, 250); //specify output parameter
+                    loginCommand.Parameters["@result"].Direction = ParameterDirection.Output;
+                    //Creates a reader and executes command
+                    SqlDataReader reader = loginCommand.ExecuteReader();
+                    // If the reader finds a row
+                    bool successfull = (reader.HasRows) ? true : false;
+                    // Close reader
+                    reader.Close();
+                    string outputValue = loginCommand.Parameters["@result"].Value.ToString();
+                    //I think this one is self explanatory
+                    if (successfull)
                     {
-                        MessageBox.Show("Welcome back " + txtBoxID.Text);
+                        CurrentLogin.currentID = txtBoxID.Text;
+                        CurrentLogin.currentRole = Role;
+                        MessageBox.Show(outputValue);
+                        if (Role == 1) //Student
+                        {
+                            MessageBox.Show("Welcome back " + txtBoxID.Text);
 
-                        StudentMainForm objStudentMainForm = new StudentForms.StudentMainForm();
-                        this.Hide();
-                        objStudentMainForm.Show();
+                            StudentMainForm objStudentMainForm = new StudentForms.StudentMainForm();
+                            this.Hide();
+                            objStudentMainForm.Show();
 
+                        }
+                        else if (Role == 2) //Lecturer
+                        {
+                            MessageBox.Show("Welcome back " + txtBoxID.Text);
+                            LecturerMainForm lecturerHome = new LecturerMainForm();
+                            this.Hide();
+                            lecturerHome.Show();
+                        }
+                        else if (Role == 3) //Admin
+                        {
+                            MessageBox.Show("Welcome back " + txtBoxID.Text);
+                            //Close the login form and go to the admin home form
+                            AdminMainForm adminHome = new AdminMainForm();
+                            this.Hide();
+                            adminHome.Show();
+                        }
                     }
-                    else if (Role == 2) //Lecturer
+                    else
                     {
-                        MessageBox.Show("Welcome back " + txtBoxID.Text);
-                        LecturerMainForm lecturerHome = new LecturerMainForm();
-                        this.Hide();
-                        lecturerHome.Show();
-                    }
-                    else if (Role == 3) //Admin
-                    {
-                        MessageBox.Show("Welcome back " + txtBoxID.Text);
-                        //Close the login form and go to the admin home form
-                        AdminMainForm adminHome = new AdminMainForm();
-                        this.Hide();
-                        adminHome.Show();
+                        MessageBox.Show(outputValue);
                     }
                 }
                 else
                 {
-                    MessageBox.Show(outputValue);
+                    MessageBox.Show("Username or Password Missing!");
                 }
             }
             else
             {
-                MessageBox.Show("Username or Password Missing!");
+                MessageBox.Show("Invalid choose user role");
             }
         }
         #region Role radio selection

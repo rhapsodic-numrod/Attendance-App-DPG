@@ -134,14 +134,12 @@ namespace Attendance_App
             // studentRadio
             // 
             this.studentRadio.AutoSize = true;
-            this.studentRadio.Checked = true;
             this.studentRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentRadio.ForeColor = System.Drawing.Color.White;
             this.studentRadio.Location = new System.Drawing.Point(68, 192);
             this.studentRadio.Name = "studentRadio";
             this.studentRadio.Size = new System.Drawing.Size(76, 22);
             this.studentRadio.TabIndex = 6;
-            this.studentRadio.TabStop = true;
             this.studentRadio.Text = "Student";
             this.studentRadio.UseVisualStyleBackColor = true;
             this.studentRadio.CheckedChanged += new System.EventHandler(this.studentRadio_CheckedChanged);
