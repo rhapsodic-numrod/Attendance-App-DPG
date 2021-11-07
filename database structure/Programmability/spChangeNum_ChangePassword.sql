@@ -35,33 +35,35 @@ BEGIN
             SET @result = 'Incorrect password entered'
 END
 GO
-CREATE PROCEDURE dbo.updateMobileNo
+CREATE OR ALTER PROCEDURE dbo.updateMobileNo
 @userID VARCHAR(50),
-@newMobile CHAR(10),
+@newMobile VARCHAR(70),
 @result VARCHAR(MAX) OUT,
 @role INT
 AS
 BEGIN
     IF @role = 1
-        IF EXISTS(SELECT studentID, studentMobile FROM Student WHERE studentID = @userID AND studentMobile = @newMobile)
-            BEGIN
-                IF LEN(@newMobile) = 10
-                    BEGIN
-                        UPDATE Student SET studentMobile = @newMobile WHERE studentID = @userID
-                        SET @result = 'Mobile number successfully Changed';
-                    END
-                ELSE
+        BEGIN
+            IF LEN(@newMobile) = 10
+                BEGIN
+                    UPDATE Student SET studentMobile = @newMobile WHERE studentID = @userID
+                    SET @result = 'Mobile number successfully Changed';
+                END
+            ELSE
+                BEGIN
                     SET @result = 'Phone number must be 10 digits long'
-            END
+                END
+        END
     ELSE
-        IF EXISTS(SELECT empID, empMobile FROM Employee WHERE empID = @userID AND empMobile = @newMobile)
-            BEGIN
-                 IF LEN(@newMobile) = 10
-                    BEGIN
-                        UPDATE Employee SET empMobile = @newMobile WHERE empID = @userID
-                        SET @result = 'Mobile number successfully Changed';
-                    END
-                ELSE
+        BEGIN
+            IF LEN(@newMobile) = 10
+                BEGIN
+                    UPDATE Employee SET empMobile = @newMobile WHERE empID = @userID
+                    SET @result = 'Mobile number successfully Changed';
+                END
+            ELSE
+                BEGIN
                     SET @result = 'Phone number must be 10 digits long'
-            END
+                END
+        END
 END
