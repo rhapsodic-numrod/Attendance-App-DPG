@@ -5,5 +5,5 @@
 * Student: Profiliu
 * Employee: Tengee
 * Module: Tray-vonn 
-* Class:
+* Class:Tray-vonn, Gift
 * Attendance:Gift 
