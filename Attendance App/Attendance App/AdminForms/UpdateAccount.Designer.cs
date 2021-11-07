@@ -116,6 +116,7 @@ namespace Attendance_App.AdminForms
             this.btnUpdateNumber.TabIndex = 3;
             this.btnUpdateNumber.Text = "Update Number";
             this.btnUpdateNumber.UseVisualStyleBackColor = false;
+            this.btnUpdateNumber.Click += new System.EventHandler(this.btnUpdateNumber_Click);
             // 
             // btnCloseForm
             // 
