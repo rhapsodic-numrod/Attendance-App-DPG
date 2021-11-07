@@ -1,4 +1,3 @@
-sp_helptext 'spSearchUser'
 USE attendanceDatabase
 GO
 CREATE PROCEDURE dbo.searchByUserID
