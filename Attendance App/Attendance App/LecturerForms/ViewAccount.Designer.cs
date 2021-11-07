@@ -72,6 +72,7 @@ namespace Attendance_App.LecturerForms
             this.btnCloseForm.TabIndex = 14;
             this.btnCloseForm.Text = "✖";
             this.btnCloseForm.UseVisualStyleBackColor = false;
+            this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
             // 
             // panel1
             // 
@@ -210,7 +211,7 @@ namespace Attendance_App.LecturerForms
             this.Controls.Add(this.ViewAccountText);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewAccount";
             this.Text = "ViewAccount";
             this.panel1.ResumeLayout(false);

@@ -31,10 +31,10 @@ namespace Attendance_App.StudentForms
         {
             this.UpdateAccountText = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblPhoneNo = new System.Windows.Forms.Label();
-            this.txtBoxNewNumber = new System.Windows.Forms.TextBox();
-            this.GotoPassChangeText = new System.Windows.Forms.Label();
             this.btnGoToChangePassword = new System.Windows.Forms.Button();
+            this.GotoPassChangeText = new System.Windows.Forms.Label();
+            this.txtBoxNewNumber = new System.Windows.Forms.TextBox();
+            this.lblPhoneNo = new System.Windows.Forms.Label();
             this.btnUpdateNumber = new System.Windows.Forms.Button();
             this.btnCloseForm = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -64,32 +64,6 @@ namespace Attendance_App.StudentForms
             this.panel1.Size = new System.Drawing.Size(593, 221);
             this.panel1.TabIndex = 1;
             // 
-            // lblPhoneNo
-            // 
-            this.lblPhoneNo.AutoSize = true;
-            this.lblPhoneNo.Location = new System.Drawing.Point(110, 50);
-            this.lblPhoneNo.Name = "lblPhoneNo";
-            this.lblPhoneNo.Size = new System.Drawing.Size(107, 17);
-            this.lblPhoneNo.TabIndex = 0;
-            this.lblPhoneNo.Text = "Mobile Number:";
-            // 
-            // txtBoxNewNumber
-            // 
-            this.txtBoxNewNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNewNumber.Location = new System.Drawing.Point(238, 50);
-            this.txtBoxNewNumber.Name = "txtBoxNewNumber";
-            this.txtBoxNewNumber.Size = new System.Drawing.Size(259, 24);
-            this.txtBoxNewNumber.TabIndex = 1;
-            // 
-            // GotoPassChangeText
-            // 
-            this.GotoPassChangeText.AutoSize = true;
-            this.GotoPassChangeText.Location = new System.Drawing.Point(110, 119);
-            this.GotoPassChangeText.Name = "GotoPassChangeText";
-            this.GotoPassChangeText.Size = new System.Drawing.Size(248, 17);
-            this.GotoPassChangeText.TabIndex = 2;
-            this.GotoPassChangeText.Text = "To change your password press here:";
-            // 
             // btnGoToChangePassword
             // 
             this.btnGoToChangePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(180)))), ((int)(((byte)(189)))));
@@ -103,6 +77,32 @@ namespace Attendance_App.StudentForms
             this.btnGoToChangePassword.TabIndex = 3;
             this.btnGoToChangePassword.Text = "Change Password";
             this.btnGoToChangePassword.UseVisualStyleBackColor = false;
+            // 
+            // GotoPassChangeText
+            // 
+            this.GotoPassChangeText.AutoSize = true;
+            this.GotoPassChangeText.Location = new System.Drawing.Point(110, 119);
+            this.GotoPassChangeText.Name = "GotoPassChangeText";
+            this.GotoPassChangeText.Size = new System.Drawing.Size(248, 17);
+            this.GotoPassChangeText.TabIndex = 2;
+            this.GotoPassChangeText.Text = "To change your password press here:";
+            // 
+            // txtBoxNewNumber
+            // 
+            this.txtBoxNewNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxNewNumber.Location = new System.Drawing.Point(238, 50);
+            this.txtBoxNewNumber.Name = "txtBoxNewNumber";
+            this.txtBoxNewNumber.Size = new System.Drawing.Size(259, 24);
+            this.txtBoxNewNumber.TabIndex = 1;
+            // 
+            // lblPhoneNo
+            // 
+            this.lblPhoneNo.AutoSize = true;
+            this.lblPhoneNo.Location = new System.Drawing.Point(110, 50);
+            this.lblPhoneNo.Name = "lblPhoneNo";
+            this.lblPhoneNo.Size = new System.Drawing.Size(107, 17);
+            this.lblPhoneNo.TabIndex = 0;
+            this.lblPhoneNo.Text = "Mobile Number:";
             // 
             // btnUpdateNumber
             // 
@@ -129,8 +129,9 @@ namespace Attendance_App.StudentForms
             this.btnCloseForm.TabIndex = 10;
             this.btnCloseForm.Text = "✖";
             this.btnCloseForm.UseVisualStyleBackColor = false;
+            this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
             // 
-            // $safeitemname$
+            // UpdateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,8 +143,8 @@ namespace Attendance_App.StudentForms
             this.Controls.Add(this.UpdateAccountText);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "$safeitemname$";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "UpdateAccount";
             this.Text = "$safeitemname$";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

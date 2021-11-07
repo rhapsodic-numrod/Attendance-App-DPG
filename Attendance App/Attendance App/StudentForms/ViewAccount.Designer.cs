@@ -183,6 +183,7 @@ namespace Attendance_App.StudentForms
             this.btnCloseForm.TabIndex = 10;
             this.btnCloseForm.Text = "✖";
             this.btnCloseForm.UseVisualStyleBackColor = false;
+            this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
             // 
             // btnGoToUpdate
             // 
@@ -198,7 +199,7 @@ namespace Attendance_App.StudentForms
             this.btnGoToUpdate.Text = "GOTO Update";
             this.btnGoToUpdate.UseVisualStyleBackColor = false;
             // 
-            // $safeitemname$
+            // ViewAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -210,8 +211,8 @@ namespace Attendance_App.StudentForms
             this.Controls.Add(this.ViewAccountText);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "$safeitemname$";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "ViewAccount";
             this.Text = "$safeitemname$";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

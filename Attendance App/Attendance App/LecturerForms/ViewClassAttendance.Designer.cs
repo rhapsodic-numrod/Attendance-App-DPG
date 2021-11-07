@@ -31,9 +31,9 @@ namespace Attendance_App.LecturerForms
         {
             this.btnCloseForm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBoxCourse = new System.Windows.Forms.ComboBox();
             this.ViewAttendanceText = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,7 @@ namespace Attendance_App.LecturerForms
             this.btnCloseForm.TabIndex = 15;
             this.btnCloseForm.Text = "✖";
             this.btnCloseForm.UseVisualStyleBackColor = false;
+            this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
             // 
             // panel1
             // 
@@ -63,6 +64,14 @@ namespace Attendance_App.LecturerForms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(569, 383);
             this.panel1.TabIndex = 16;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(49, 43);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(478, 294);
+            this.dataGridView1.TabIndex = 0;
             // 
             // comboBoxCourse
             // 
@@ -82,14 +91,6 @@ namespace Attendance_App.LecturerForms
             this.ViewAttendanceText.TabIndex = 19;
             this.ViewAttendanceText.Text = "View Attendance -";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(49, 43);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(478, 294);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // ViewClassAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -101,7 +102,7 @@ namespace Attendance_App.LecturerForms
             this.Controls.Add(this.btnCloseForm);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewClassAttendance";
             this.Text = "ViewClassAttendance";
             this.panel1.ResumeLayout(false);

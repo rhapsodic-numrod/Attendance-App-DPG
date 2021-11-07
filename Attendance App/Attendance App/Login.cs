@@ -137,7 +137,6 @@ namespace Attendance_App
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
             this.Close();
             //Application.Exit();
         }

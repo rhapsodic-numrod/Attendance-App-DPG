@@ -41,5 +41,10 @@ namespace Attendance_App.StudentForms
         {
 
         }
+
+        private void btnCloseForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

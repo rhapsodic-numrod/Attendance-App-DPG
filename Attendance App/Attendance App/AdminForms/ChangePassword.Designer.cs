@@ -31,12 +31,12 @@ namespace Attendance_App.AdminForms
         {
             this.ChangePasswordText = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblPreviousPassword = new System.Windows.Forms.Label();
-            this.lblNewPassword = new System.Windows.Forms.Label();
-            this.lblPasswordConfirm = new System.Windows.Forms.Label();
-            this.txtBoxPreviousPassword = new System.Windows.Forms.TextBox();
-            this.txtBoxNewPassword = new System.Windows.Forms.TextBox();
             this.txtBoxPasswordConfirm = new System.Windows.Forms.TextBox();
+            this.txtBoxNewPassword = new System.Windows.Forms.TextBox();
+            this.txtBoxPreviousPassword = new System.Windows.Forms.TextBox();
+            this.lblPasswordConfirm = new System.Windows.Forms.Label();
+            this.lblNewPassword = new System.Windows.Forms.Label();
+            this.lblPreviousPassword = new System.Windows.Forms.Label();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnCloseForm = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -66,23 +66,29 @@ namespace Attendance_App.AdminForms
             this.panel1.Size = new System.Drawing.Size(509, 272);
             this.panel1.TabIndex = 1;
             // 
-            // lblPreviousPassword
+            // txtBoxPasswordConfirm
             // 
-            this.lblPreviousPassword.AutoSize = true;
-            this.lblPreviousPassword.Location = new System.Drawing.Point(61, 72);
-            this.lblPreviousPassword.Name = "lblPreviousPassword";
-            this.lblPreviousPassword.Size = new System.Drawing.Size(162, 17);
-            this.lblPreviousPassword.TabIndex = 0;
-            this.lblPreviousPassword.Text = "Enter Current Password:";
+            this.txtBoxPasswordConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxPasswordConfirm.Location = new System.Drawing.Point(226, 182);
+            this.txtBoxPasswordConfirm.Name = "txtBoxPasswordConfirm";
+            this.txtBoxPasswordConfirm.Size = new System.Drawing.Size(226, 24);
+            this.txtBoxPasswordConfirm.TabIndex = 3;
             // 
-            // lblNewPassword
+            // txtBoxNewPassword
             // 
-            this.lblNewPassword.AutoSize = true;
-            this.lblNewPassword.Location = new System.Drawing.Point(61, 129);
-            this.lblNewPassword.Name = "lblNewPassword";
-            this.lblNewPassword.Size = new System.Drawing.Size(142, 17);
-            this.lblNewPassword.TabIndex = 1;
-            this.lblNewPassword.Text = "Enter New Password:";
+            this.txtBoxNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxNewPassword.Location = new System.Drawing.Point(226, 125);
+            this.txtBoxNewPassword.Name = "txtBoxNewPassword";
+            this.txtBoxNewPassword.Size = new System.Drawing.Size(226, 24);
+            this.txtBoxNewPassword.TabIndex = 3;
+            // 
+            // txtBoxPreviousPassword
+            // 
+            this.txtBoxPreviousPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxPreviousPassword.Location = new System.Drawing.Point(226, 68);
+            this.txtBoxPreviousPassword.Name = "txtBoxPreviousPassword";
+            this.txtBoxPreviousPassword.Size = new System.Drawing.Size(226, 24);
+            this.txtBoxPreviousPassword.TabIndex = 3;
             // 
             // lblPasswordConfirm
             // 
@@ -93,29 +99,23 @@ namespace Attendance_App.AdminForms
             this.lblPasswordConfirm.TabIndex = 2;
             this.lblPasswordConfirm.Text = "Confirm New Password:";
             // 
-            // txtBoxPreviousPassword
+            // lblNewPassword
             // 
-            this.txtBoxPreviousPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxPreviousPassword.Location = new System.Drawing.Point(226, 68);
-            this.txtBoxPreviousPassword.Name = "txtBoxPreviousPassword";
-            this.txtBoxPreviousPassword.Size = new System.Drawing.Size(226, 24);
-            this.txtBoxPreviousPassword.TabIndex = 3;
+            this.lblNewPassword.AutoSize = true;
+            this.lblNewPassword.Location = new System.Drawing.Point(61, 129);
+            this.lblNewPassword.Name = "lblNewPassword";
+            this.lblNewPassword.Size = new System.Drawing.Size(142, 17);
+            this.lblNewPassword.TabIndex = 1;
+            this.lblNewPassword.Text = "Enter New Password:";
             // 
-            // txtBoxNewPassword
+            // lblPreviousPassword
             // 
-            this.txtBoxNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNewPassword.Location = new System.Drawing.Point(226, 125);
-            this.txtBoxNewPassword.Name = "txtBoxNewPassword";
-            this.txtBoxNewPassword.Size = new System.Drawing.Size(226, 24);
-            this.txtBoxNewPassword.TabIndex = 3;
-            // 
-            // txtBoxPasswordConfirm
-            // 
-            this.txtBoxPasswordConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxPasswordConfirm.Location = new System.Drawing.Point(226, 182);
-            this.txtBoxPasswordConfirm.Name = "txtBoxPasswordConfirm";
-            this.txtBoxPasswordConfirm.Size = new System.Drawing.Size(226, 24);
-            this.txtBoxPasswordConfirm.TabIndex = 3;
+            this.lblPreviousPassword.AutoSize = true;
+            this.lblPreviousPassword.Location = new System.Drawing.Point(61, 72);
+            this.lblPreviousPassword.Name = "lblPreviousPassword";
+            this.lblPreviousPassword.Size = new System.Drawing.Size(162, 17);
+            this.lblPreviousPassword.TabIndex = 0;
+            this.lblPreviousPassword.Text = "Enter Current Password:";
             // 
             // btnChangePassword
             // 
@@ -143,6 +143,7 @@ namespace Attendance_App.AdminForms
             this.btnCloseForm.TabIndex = 11;
             this.btnCloseForm.Text = "✖";
             this.btnCloseForm.UseVisualStyleBackColor = false;
+            this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
             // 
             // ChangePassword
             // 
@@ -156,7 +157,7 @@ namespace Attendance_App.AdminForms
             this.Controls.Add(this.ChangePasswordText);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChangePassword";
             this.Text = "ChangePassword";
             this.panel1.ResumeLayout(false);
