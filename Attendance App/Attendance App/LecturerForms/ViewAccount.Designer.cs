@@ -97,6 +97,7 @@ namespace Attendance_App.LecturerForms
             this.txtBoxMName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxMName.Location = new System.Drawing.Point(228, 112);
             this.txtBoxMName.Name = "txtBoxMName";
+            this.txtBoxMName.ReadOnly = true;
             this.txtBoxMName.Size = new System.Drawing.Size(286, 24);
             this.txtBoxMName.TabIndex = 19;
             // 
@@ -105,6 +106,7 @@ namespace Attendance_App.LecturerForms
             this.txtBoxPhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPhoneNo.Location = new System.Drawing.Point(228, 298);
             this.txtBoxPhoneNo.Name = "txtBoxPhoneNo";
+            this.txtBoxPhoneNo.ReadOnly = true;
             this.txtBoxPhoneNo.Size = new System.Drawing.Size(286, 24);
             this.txtBoxPhoneNo.TabIndex = 18;
             // 
@@ -113,6 +115,7 @@ namespace Attendance_App.LecturerForms
             this.txtBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxEmail.Location = new System.Drawing.Point(228, 234);
             this.txtBoxEmail.Name = "txtBoxEmail";
+            this.txtBoxEmail.ReadOnly = true;
             this.txtBoxEmail.Size = new System.Drawing.Size(286, 24);
             this.txtBoxEmail.TabIndex = 17;
             // 
@@ -121,6 +124,7 @@ namespace Attendance_App.LecturerForms
             this.txtBoxLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxLName.Location = new System.Drawing.Point(228, 173);
             this.txtBoxLName.Name = "txtBoxLName";
+            this.txtBoxLName.ReadOnly = true;
             this.txtBoxLName.Size = new System.Drawing.Size(286, 24);
             this.txtBoxLName.TabIndex = 16;
             // 
@@ -129,6 +133,7 @@ namespace Attendance_App.LecturerForms
             this.txtBoxFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxFname.Location = new System.Drawing.Point(228, 51);
             this.txtBoxFname.Name = "txtBoxFname";
+            this.txtBoxFname.ReadOnly = true;
             this.txtBoxFname.Size = new System.Drawing.Size(286, 24);
             this.txtBoxFname.TabIndex = 15;
             // 
