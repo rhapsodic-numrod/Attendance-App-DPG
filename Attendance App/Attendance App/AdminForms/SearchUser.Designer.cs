@@ -29,14 +29,29 @@ namespace Attendance_App.AdminForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.SearchText = new System.Windows.Forms.Label();
             this.panelSearchBox = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.dataGridViewResults = new System.Windows.Forms.DataGridView();
             this.txtBoxSearchParam = new System.Windows.Forms.TextBox();
             this.btnCloseForm = new System.Windows.Forms.Button();
+            this.attendanceDatabaseDataSet = new Attendance_App.AttendanceDatabaseDataSet();
+            this.attendanceDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.allUsers = new Attendance_App.allUsers();
+            this.allUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.allUsersTableAdapter = new Attendance_App.allUsersTableAdapters.allUsersTableAdapter();
+            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userMobileDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelSearchBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.attendanceDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.attendanceDatabaseDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allUsersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchText
@@ -57,43 +72,39 @@ namespace Attendance_App.AdminForms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelSearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(168)))), ((int)(((byte)(172)))));
-            this.panelSearchBox.Controls.Add(this.dataGridView1);
-            this.panelSearchBox.Controls.Add(this.btnSearch);
+            this.panelSearchBox.Controls.Add(this.dataGridViewResults);
             this.panelSearchBox.Controls.Add(this.txtBoxSearchParam);
             this.panelSearchBox.Location = new System.Drawing.Point(84, 117);
             this.panelSearchBox.Name = "panelSearchBox";
             this.panelSearchBox.Size = new System.Drawing.Size(587, 419);
             this.panelSearchBox.TabIndex = 1;
             // 
-            // dataGridView1
+            // dataGridViewResults
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(122, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(365, 258);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(180)))), ((int)(((byte)(189)))));
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(436, 36);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(90, 39);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
+            this.dataGridViewResults.AutoGenerateColumns = false;
+            this.dataGridViewResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.userIDDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.middleNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.userEmailDataGridViewTextBoxColumn,
+            this.userMobileDataGridViewTextBoxColumn});
+            this.dataGridViewResults.DataSource = this.allUsersBindingSource;
+            this.dataGridViewResults.Location = new System.Drawing.Point(86, 105);
+            this.dataGridViewResults.Name = "dataGridViewResults";
+            this.dataGridViewResults.Size = new System.Drawing.Size(449, 262);
+            this.dataGridViewResults.TabIndex = 2;
             // 
             // txtBoxSearchParam
             // 
             this.txtBoxSearchParam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBoxSearchParam.Location = new System.Drawing.Point(79, 44);
+            this.txtBoxSearchParam.Location = new System.Drawing.Point(122, 57);
             this.txtBoxSearchParam.Name = "txtBoxSearchParam";
-            this.txtBoxSearchParam.Size = new System.Drawing.Size(324, 23);
+            this.txtBoxSearchParam.Size = new System.Drawing.Size(379, 23);
             this.txtBoxSearchParam.TabIndex = 0;
+            this.txtBoxSearchParam.Text = " ";
+            this.txtBoxSearchParam.TextChanged += new System.EventHandler(this.txtBoxSearchParam_TextChanged);
             // 
             // btnCloseForm
             // 
@@ -110,6 +121,66 @@ namespace Attendance_App.AdminForms
             this.btnCloseForm.UseVisualStyleBackColor = false;
             this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
             // 
+            // attendanceDatabaseDataSet
+            // 
+            this.attendanceDatabaseDataSet.DataSetName = "AttendanceDatabaseDataSet";
+            this.attendanceDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // attendanceDatabaseDataSetBindingSource
+            // 
+            this.attendanceDatabaseDataSetBindingSource.DataSource = this.attendanceDatabaseDataSet;
+            this.attendanceDatabaseDataSetBindingSource.Position = 0;
+            // 
+            // allUsers
+            // 
+            this.allUsers.DataSetName = "allUsers";
+            this.allUsers.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // allUsersBindingSource
+            // 
+            this.allUsersBindingSource.DataMember = "allUsers";
+            this.allUsersBindingSource.DataSource = this.allUsers;
+            // 
+            // allUsersTableAdapter
+            // 
+            this.allUsersTableAdapter.ClearBeforeFill = true;
+            // 
+            // userIDDataGridViewTextBoxColumn
+            // 
+            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "userID";
+            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "firstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "firstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // middleNameDataGridViewTextBoxColumn
+            // 
+            this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "middleName";
+            this.middleNameDataGridViewTextBoxColumn.HeaderText = "middleName";
+            this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "lastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "lastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // userEmailDataGridViewTextBoxColumn
+            // 
+            this.userEmailDataGridViewTextBoxColumn.DataPropertyName = "userEmail";
+            this.userEmailDataGridViewTextBoxColumn.HeaderText = "userEmail";
+            this.userEmailDataGridViewTextBoxColumn.Name = "userEmailDataGridViewTextBoxColumn";
+            // 
+            // userMobileDataGridViewTextBoxColumn
+            // 
+            this.userMobileDataGridViewTextBoxColumn.DataPropertyName = "userMobile";
+            this.userMobileDataGridViewTextBoxColumn.HeaderText = "userMobile";
+            this.userMobileDataGridViewTextBoxColumn.Name = "userMobileDataGridViewTextBoxColumn";
+            // 
             // SearchUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -124,9 +195,14 @@ namespace Attendance_App.AdminForms
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SearchUser";
             this.Text = "SearchUser";
+            this.Load += new System.EventHandler(this.SearchUser_Load);
             this.panelSearchBox.ResumeLayout(false);
             this.panelSearchBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.attendanceDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.attendanceDatabaseDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allUsersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,9 +212,19 @@ namespace Attendance_App.AdminForms
 
         private System.Windows.Forms.Label SearchText;
         private System.Windows.Forms.Panel panelSearchBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.DataGridView dataGridViewResults;
         private System.Windows.Forms.TextBox txtBoxSearchParam;
         private System.Windows.Forms.Button btnCloseForm;
+        private System.Windows.Forms.BindingSource attendanceDatabaseDataSetBindingSource;
+        private AttendanceDatabaseDataSet attendanceDatabaseDataSet;
+        private allUsers allUsers;
+        private System.Windows.Forms.BindingSource allUsersBindingSource;
+        private allUsersTableAdapters.allUsersTableAdapter allUsersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn middleNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userEmailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userMobileDataGridViewTextBoxColumn;
     }
 }
