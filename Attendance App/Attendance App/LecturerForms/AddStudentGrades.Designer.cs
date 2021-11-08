@@ -35,9 +35,9 @@ namespace Attendance_App.LecturerForms
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddGrade = new System.Windows.Forms.Button();
             this.btnGetInfo = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxStudGrade = new System.Windows.Forms.TextBox();
+            this.txtBoxStudName = new System.Windows.Forms.TextBox();
+            this.txtBoxStudID = new System.Windows.Forms.TextBox();
             this.lblGrade = new System.Windows.Forms.Label();
             this.lblStudName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -87,9 +87,9 @@ namespace Attendance_App.LecturerForms
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(168)))), ((int)(((byte)(172)))));
             this.panel1.Controls.Add(this.btnAddGrade);
             this.panel1.Controls.Add(this.btnGetInfo);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtBoxStudGrade);
+            this.panel1.Controls.Add(this.txtBoxStudName);
+            this.panel1.Controls.Add(this.txtBoxStudID);
             this.panel1.Controls.Add(this.lblGrade);
             this.panel1.Controls.Add(this.lblStudName);
             this.panel1.Controls.Add(this.label1);
@@ -112,6 +112,7 @@ namespace Attendance_App.LecturerForms
             this.btnAddGrade.TabIndex = 3;
             this.btnAddGrade.Text = "Add Grade";
             this.btnAddGrade.UseVisualStyleBackColor = false;
+            this.btnAddGrade.Click += new System.EventHandler(this.btnAddGrade_Click);
             // 
             // btnGetInfo
             // 
@@ -126,30 +127,31 @@ namespace Attendance_App.LecturerForms
             this.btnGetInfo.TabIndex = 3;
             this.btnGetInfo.Text = "Get Info";
             this.btnGetInfo.UseVisualStyleBackColor = false;
+            this.btnGetInfo.Click += new System.EventHandler(this.btnGetInfo_Click);
             // 
-            // textBox3
+            // txtBoxStudGrade
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(198, 162);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(101, 24);
-            this.textBox3.TabIndex = 2;
+            this.txtBoxStudGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxStudGrade.Location = new System.Drawing.Point(198, 162);
+            this.txtBoxStudGrade.Name = "txtBoxStudGrade";
+            this.txtBoxStudGrade.Size = new System.Drawing.Size(101, 24);
+            this.txtBoxStudGrade.TabIndex = 2;
             // 
-            // textBox2
+            // txtBoxStudName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(198, 115);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 24);
-            this.textBox2.TabIndex = 2;
+            this.txtBoxStudName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxStudName.Location = new System.Drawing.Point(198, 115);
+            this.txtBoxStudName.Name = "txtBoxStudName";
+            this.txtBoxStudName.Size = new System.Drawing.Size(168, 24);
+            this.txtBoxStudName.TabIndex = 2;
             // 
-            // textBox1
+            // txtBoxStudID
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(198, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 24);
-            this.textBox1.TabIndex = 2;
+            this.txtBoxStudID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxStudID.Location = new System.Drawing.Point(198, 70);
+            this.txtBoxStudID.Name = "txtBoxStudID";
+            this.txtBoxStudID.Size = new System.Drawing.Size(168, 24);
+            this.txtBoxStudID.TabIndex = 2;
             // 
             // lblGrade
             // 
@@ -217,9 +219,9 @@ namespace Attendance_App.LecturerForms
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAddGrade;
         private System.Windows.Forms.Button btnGetInfo;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxStudGrade;
+        private System.Windows.Forms.TextBox txtBoxStudName;
+        private System.Windows.Forms.TextBox txtBoxStudID;
         private System.Windows.Forms.Label lblGrade;
         private System.Windows.Forms.Label lblStudName;
         private System.Windows.Forms.Label label1;

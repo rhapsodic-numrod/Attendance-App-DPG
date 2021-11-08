@@ -130,6 +130,7 @@ namespace Attendance_App.AdminForms
             this.btnChangePassword.TabIndex = 4;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // btnCloseForm
             // 

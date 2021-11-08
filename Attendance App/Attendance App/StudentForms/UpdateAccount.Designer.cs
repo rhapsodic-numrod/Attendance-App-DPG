@@ -77,6 +77,7 @@ namespace Attendance_App.StudentForms
             this.btnGoToChangePassword.TabIndex = 3;
             this.btnGoToChangePassword.Text = "Change Password";
             this.btnGoToChangePassword.UseVisualStyleBackColor = false;
+            this.btnGoToChangePassword.Click += new System.EventHandler(this.btnGoToChangePassword_Click);
             // 
             // GotoPassChangeText
             // 
@@ -116,6 +117,7 @@ namespace Attendance_App.StudentForms
             this.btnUpdateNumber.TabIndex = 3;
             this.btnUpdateNumber.Text = "Update Number";
             this.btnUpdateNumber.UseVisualStyleBackColor = false;
+            this.btnUpdateNumber.Click += new System.EventHandler(this.btnUpdateNumber_Click);
             // 
             // btnCloseForm
             // 

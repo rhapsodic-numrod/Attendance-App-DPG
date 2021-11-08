@@ -69,6 +69,7 @@ namespace Attendance_App.LecturerForms
             this.btnChangePassword.TabIndex = 14;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // panel1
             // 

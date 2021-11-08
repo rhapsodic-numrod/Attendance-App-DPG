@@ -77,6 +77,7 @@ namespace Attendance_App.AdminForms
             this.btnGoToChangePassword.TabIndex = 3;
             this.btnGoToChangePassword.Text = "Change Password";
             this.btnGoToChangePassword.UseVisualStyleBackColor = false;
+            this.btnGoToChangePassword.Click += new System.EventHandler(this.btnGoToChangePassword_Click);
             // 
             // GotoPassChangeText
             // 
