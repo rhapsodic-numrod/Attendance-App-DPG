@@ -24,43 +24,52 @@ BEGIN
             SET @result = 'User does not exist'
 END
 GO
-CREATE PROCEDURE dbo.updateUser
+CREATE OR ALTER PROCEDURE dbo.updateUser
 @userID VARCHAR(50),
 @firstName VARCHAR(50),
 @middleName VARCHAR(50),
 @lastName VARCHAR(50),
 @email VARCHAR(50),
-@mobile CHAR(10),
-@error VARCHAR(MAX),
+@mobile CHAR(70),
+@result VARCHAR(MAX) OUT,
 @role INT
 AS
 BEGIN
     IF @role = 1 
-        IF EXISTS(SELECT studentID FROM Student WHERE studentID = @userID)
-            BEGIN TRY
-                UPDATE Student SET
-                firstName = @firstName,
-                middleName = @middleName,
-                lastName = @lastName,
-                studentEmail = @email,
-                studentMobile = @mobile
-                WHERE studentID = @userID
-            END TRY
-            BEGIN CATCH
-                SET @error = ERROR_MESSAGE();
-            END CATCH
+        BEGIN
+            IF LEN(@mobile) = 10
+               BEGIN
+                    UPDATE Student SET
+                    firstName = @firstName,
+                    middleName = @middleName,
+                    lastName = @lastName,
+                    studentEmail = @email,
+                    studentMobile = @mobile
+                    WHERE studentID = @userID
+                    SET @result = 'User Updated successfully'
+                END
+            ELSE
+                BEGIN
+                    SET @result = 'Phone number must be 10 digits long';
+                END
+        END
     ELSE
-        IF EXISTS(SELECT empID FROM Employee WHERE empID = @userID)
-            BEGIN TRY
-                UPDATE Employee SET
-                firstName = @firstName,
-                middleName = @middleName,
-                lastName = @lastName,
-                empEmail = @email,
-                empMobile = @mobile
-                WHERE empID = @userID
-            END TRY
-            BEGIN CATCH
-                SET @error = ERROR_MESSAGE();
-            END CATCH
+        BEGIN
+            IF LEN(@mobile) = 10
+                BEGIN
+                    UPDATE Employee SET
+                    firstName = @firstName,
+                    middleName = @middleName,
+                    lastName = @lastName,
+                    empEmail = @email,
+                    empMobile = @mobile
+                    WHERE empID = @userID
+                    SET @result = 'User Updated successfully'
+                END
+                
+            ELSE
+                BEGIN
+                    SET @result = 'Phone number must be 10 digits long';
+                END
+        END
 END
