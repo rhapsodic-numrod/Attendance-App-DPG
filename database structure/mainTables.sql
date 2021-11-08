@@ -86,3 +86,15 @@ INSERT INTO [Module](moduleID,moduleName)
                   (4,'DSA521S'),
                   (5,'COA511S'),
                   (6,'EPR511S')
+GO
+CREATE VIEW allUsers AS
+SELECT studentID AS userID, firstName, middleName, lastName, studentEmail AS userEmail, studentMobile AS userMobile FROM Student
+    UNION
+SELECT empID, firstName, middleName, lastName, empEmail, empMobile FROM Employee
+GO
+CREATE PROCEDURE generalSearch
+@searchParam VARCHAR(50)
+AS
+BEGIN
+    SELECT * FROM allUsers WHERE userID LIKE '%'+@searchParam+'%' OR firstName LIKE '%'+@searchParam+'%' OR middleName LIKE '%'+@searchParam+'%' OR lastName LIKE '%'+@searchParam+'%' OR userEmail LIKE '%'+@searchParam+'%' OR userMobile LIKE '%'+@searchParam+'%' 
+END
