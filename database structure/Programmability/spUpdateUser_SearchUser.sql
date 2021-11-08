@@ -1,6 +1,6 @@
 USE attendanceDatabase
 GO
-CREATE PROCEDURE dbo.searchByUserID
+CREATE OR ALTER PROCEDURE dbo.searchByUserID
 @userID VARCHAR(50),
 @result VARCHAR(MAX) OUT,
 @role INT
@@ -8,12 +8,18 @@ AS
 BEGIN
     IF @role = 1
         IF EXISTS(SELECT studentID FROM Student WHERE studentID = @userID)
-            SELECT * FROM Student WHERE studentID = @userID
+            BEGIN
+                SELECT * FROM Student WHERE studentID = @userID
+                SET @result = 'Found ' + @userID
+            END
         ELSE
             SET @result = 'User does not exist'
     ELSE
         IF EXISTS(SELECT empID FROM Employee WHERE empID = @userID)
-            SELECT * FROM Employee WHERE empID = @userID
+            BEGIN
+                SELECT * FROM Employee WHERE empID = @userID
+                SET @result = 'Found ' + @userID
+            END
         ELSE
             SET @result = 'User does not exist'
 END

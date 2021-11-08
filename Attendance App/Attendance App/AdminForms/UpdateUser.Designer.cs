@@ -31,16 +31,16 @@ namespace Attendance_App.AdminForms
         {
             this.updateUserText = new System.Windows.Forms.Label();
             this.panelUpdateBox = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxPhoneNum = new System.Windows.Forms.TextBox();
             this.lblMobileNumber = new System.Windows.Forms.Label();
             this.btnGetUserInfo = new System.Windows.Forms.Button();
             this.txtBoxFName = new System.Windows.Forms.TextBox();
             this.lblFname = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtBoxEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBoxLName = new System.Windows.Forms.TextBox();
             this.lblLName = new System.Windows.Forms.Label();
-            this.tx = new System.Windows.Forms.TextBox();
+            this.txtBoxMName = new System.Windows.Forms.TextBox();
             this.lblMName = new System.Windows.Forms.Label();
             this.txtBoxUserID = new System.Windows.Forms.TextBox();
             this.radioAdmin = new System.Windows.Forms.RadioButton();
@@ -65,16 +65,16 @@ namespace Attendance_App.AdminForms
             // panelUpdateBox
             // 
             this.panelUpdateBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(168)))), ((int)(((byte)(172)))));
-            this.panelUpdateBox.Controls.Add(this.textBox1);
+            this.panelUpdateBox.Controls.Add(this.txtBoxPhoneNum);
             this.panelUpdateBox.Controls.Add(this.lblMobileNumber);
             this.panelUpdateBox.Controls.Add(this.btnGetUserInfo);
             this.panelUpdateBox.Controls.Add(this.txtBoxFName);
             this.panelUpdateBox.Controls.Add(this.lblFname);
-            this.panelUpdateBox.Controls.Add(this.textBox3);
+            this.panelUpdateBox.Controls.Add(this.txtBoxEmail);
             this.panelUpdateBox.Controls.Add(this.lblEmail);
-            this.panelUpdateBox.Controls.Add(this.textBox2);
+            this.panelUpdateBox.Controls.Add(this.txtBoxLName);
             this.panelUpdateBox.Controls.Add(this.lblLName);
-            this.panelUpdateBox.Controls.Add(this.tx);
+            this.panelUpdateBox.Controls.Add(this.txtBoxMName);
             this.panelUpdateBox.Controls.Add(this.lblMName);
             this.panelUpdateBox.Controls.Add(this.txtBoxUserID);
             this.panelUpdateBox.Controls.Add(this.radioAdmin);
@@ -86,13 +86,13 @@ namespace Attendance_App.AdminForms
             this.panelUpdateBox.Size = new System.Drawing.Size(560, 406);
             this.panelUpdateBox.TabIndex = 1;
             // 
-            // textBox1
+            // txtBoxPhoneNum
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(198, 333);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(281, 24);
-            this.textBox1.TabIndex = 28;
+            this.txtBoxPhoneNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxPhoneNum.Location = new System.Drawing.Point(198, 333);
+            this.txtBoxPhoneNum.Name = "txtBoxPhoneNum";
+            this.txtBoxPhoneNum.Size = new System.Drawing.Size(281, 24);
+            this.txtBoxPhoneNum.TabIndex = 28;
             // 
             // lblMobileNumber
             // 
@@ -116,6 +116,7 @@ namespace Attendance_App.AdminForms
             this.btnGetUserInfo.TabIndex = 26;
             this.btnGetUserInfo.Text = "Get Info";
             this.btnGetUserInfo.UseVisualStyleBackColor = false;
+            this.btnGetUserInfo.Click += new System.EventHandler(this.btnGetUserInfo_Click);
             // 
             // txtBoxFName
             // 
@@ -134,13 +135,13 @@ namespace Attendance_App.AdminForms
             this.lblFname.TabIndex = 24;
             this.lblFname.Text = "First Name:";
             // 
-            // textBox3
+            // txtBoxEmail
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(198, 284);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(281, 24);
-            this.textBox3.TabIndex = 23;
+            this.txtBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxEmail.Location = new System.Drawing.Point(198, 284);
+            this.txtBoxEmail.Name = "txtBoxEmail";
+            this.txtBoxEmail.Size = new System.Drawing.Size(281, 24);
+            this.txtBoxEmail.TabIndex = 23;
             // 
             // lblEmail
             // 
@@ -151,13 +152,13 @@ namespace Attendance_App.AdminForms
             this.lblEmail.TabIndex = 22;
             this.lblEmail.Text = "Email Adress:";
             // 
-            // textBox2
+            // txtBoxLName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(198, 233);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(281, 24);
-            this.textBox2.TabIndex = 21;
+            this.txtBoxLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxLName.Location = new System.Drawing.Point(198, 233);
+            this.txtBoxLName.Name = "txtBoxLName";
+            this.txtBoxLName.Size = new System.Drawing.Size(281, 24);
+            this.txtBoxLName.TabIndex = 21;
             // 
             // lblLName
             // 
@@ -168,13 +169,13 @@ namespace Attendance_App.AdminForms
             this.lblLName.TabIndex = 20;
             this.lblLName.Text = "Last Name:";
             // 
-            // tx
+            // txtBoxMName
             // 
-            this.tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tx.Location = new System.Drawing.Point(198, 184);
-            this.tx.Name = "tx";
-            this.tx.Size = new System.Drawing.Size(281, 24);
-            this.tx.TabIndex = 19;
+            this.txtBoxMName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMName.Location = new System.Drawing.Point(198, 184);
+            this.txtBoxMName.Name = "txtBoxMName";
+            this.txtBoxMName.Size = new System.Drawing.Size(281, 24);
+            this.txtBoxMName.TabIndex = 19;
             // 
             // lblMName
             // 
@@ -203,6 +204,7 @@ namespace Attendance_App.AdminForms
             this.radioAdmin.TabStop = true;
             this.radioAdmin.Text = "Admin";
             this.radioAdmin.UseVisualStyleBackColor = true;
+            this.radioAdmin.CheckedChanged += new System.EventHandler(this.radioAdmin_CheckedChanged);
             // 
             // radioLecturer
             // 
@@ -214,6 +216,7 @@ namespace Attendance_App.AdminForms
             this.radioLecturer.TabStop = true;
             this.radioLecturer.Text = "Lecturer";
             this.radioLecturer.UseVisualStyleBackColor = true;
+            this.radioLecturer.CheckedChanged += new System.EventHandler(this.radioLecturer_CheckedChanged);
             // 
             // radioStudent
             // 
@@ -225,6 +228,7 @@ namespace Attendance_App.AdminForms
             this.radioStudent.TabStop = true;
             this.radioStudent.Text = "Student";
             this.radioStudent.UseVisualStyleBackColor = true;
+            this.radioStudent.CheckedChanged += new System.EventHandler(this.radioStudent_CheckedChanged);
             // 
             // lblEnterUserID
             // 
@@ -262,6 +266,7 @@ namespace Attendance_App.AdminForms
             this.btnUpdateUser.TabIndex = 11;
             this.btnUpdateUser.Text = "Update User";
             this.btnUpdateUser.UseVisualStyleBackColor = false;
+            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
             // 
             // UpdateUser
             // 
@@ -298,14 +303,14 @@ namespace Attendance_App.AdminForms
         private System.Windows.Forms.Button btnUpdateUser;
         private System.Windows.Forms.TextBox txtBoxFName;
         private System.Windows.Forms.Label lblFname;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtBoxEmail;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBoxLName;
         private System.Windows.Forms.Label lblLName;
-        private System.Windows.Forms.TextBox tx;
+        private System.Windows.Forms.TextBox txtBoxMName;
         private System.Windows.Forms.Label lblMName;
         private System.Windows.Forms.Button btnGetUserInfo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxPhoneNum;
         private System.Windows.Forms.Label lblMobileNumber;
     }
 }
