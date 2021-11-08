@@ -34,3 +34,14 @@ CREATE TABLE Employee_Class (
 	empID VARCHAR(50) FOREIGN KEY REFERENCES Employee(empID),
 	classID INT FOREIGN KEY REFERENCES Class(classID)
 )
+GO
+-- Create views for user login information
+CREATE VIEW studentLoginDetails AS
+SELECT r.roleID, s.studentID, s.studentPassword FROM Student_Role AS r
+INNER JOIN Student AS s
+ON s.studentID = r.studentID
+GO
+CREATE VIEW employeeLoginDetails AS
+SELECT r.roleID, e.empID, e.empPassword FROM Employee_Role AS r
+INNER JOIN Employee AS e
+ON e.empID = r.empID
