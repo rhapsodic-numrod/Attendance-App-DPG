@@ -28,7 +28,6 @@ namespace Attendance_App.LecturerForms
         private void btnGoToChangePassword_Click(object sender, EventArgs e)
         {
             ChangePassword changePass = new ChangePassword();
-            //this.Hide();
             changePass.Show();
         }
         static string connectionString = ConfigurationManager.ConnectionStrings["connString"].ConnectionString;

@@ -42,6 +42,7 @@ namespace Attendance_App.LecturerForms
             this.btnHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelInnerForms = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelClassesSubMenu.SuspendLayout();
             this.panelAccountSubMenu.SuspendLayout();
@@ -51,6 +52,7 @@ namespace Attendance_App.LecturerForms
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(75)))), ((int)(((byte)(84)))));
+            this.panelSideMenu.Controls.Add(this.btnLogOut);
             this.panelSideMenu.Controls.Add(this.panelClassesSubMenu);
             this.panelSideMenu.Controls.Add(this.btnClasses);
             this.panelSideMenu.Controls.Add(this.panelAccountSubMenu);
@@ -241,6 +243,24 @@ namespace Attendance_App.LecturerForms
             this.panelInnerForms.Size = new System.Drawing.Size(744, 611);
             this.panelInnerForms.TabIndex = 2;
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(168)))), ((int)(((byte)(172)))));
+            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Location = new System.Drawing.Point(0, 534);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLogOut.Size = new System.Drawing.Size(240, 50);
+            this.btnLogOut.TabIndex = 7;
+            this.btnLogOut.Text = "Logout";
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // LecturerMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -249,7 +269,7 @@ namespace Attendance_App.LecturerForms
             this.Controls.Add(this.panelInnerForms);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LecturerMainForm";
             this.Text = "Attendance App";
             this.panelSideMenu.ResumeLayout(false);
@@ -274,5 +294,6 @@ namespace Attendance_App.LecturerForms
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelInnerForms;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

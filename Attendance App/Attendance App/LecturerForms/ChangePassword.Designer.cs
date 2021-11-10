@@ -29,7 +29,6 @@ namespace Attendance_App.LecturerForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCloseForm = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtBoxPasswordConfirm = new System.Windows.Forms.TextBox();
@@ -41,20 +40,6 @@ namespace Attendance_App.LecturerForms
             this.ChangePasswordText = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnCloseForm
-            // 
-            this.btnCloseForm.BackColor = System.Drawing.Color.Crimson;
-            this.btnCloseForm.FlatAppearance.BorderSize = 0;
-            this.btnCloseForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseForm.ForeColor = System.Drawing.Color.White;
-            this.btnCloseForm.Location = new System.Drawing.Point(681, 21);
-            this.btnCloseForm.Name = "btnCloseForm";
-            this.btnCloseForm.Size = new System.Drawing.Size(32, 32);
-            this.btnCloseForm.TabIndex = 15;
-            this.btnCloseForm.Text = "✖";
-            this.btnCloseForm.UseVisualStyleBackColor = false;
-            this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
             // 
             // btnChangePassword
             // 
@@ -152,14 +137,14 @@ namespace Attendance_App.LecturerForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(744, 611);
-            this.Controls.Add(this.btnCloseForm);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ChangePasswordText);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChangePassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangePassword";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -169,8 +154,6 @@ namespace Attendance_App.LecturerForms
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCloseForm;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtBoxPasswordConfirm;

@@ -63,16 +63,15 @@ namespace Attendance_App.LecturerForms
         }
         #endregion
 
-        ChildForms form = new ChildForms();
         #region Account Sub Menu Options
         private void btnViewAccount_Click_1(object sender, EventArgs e)
         {
-            form.openChildForm(new ViewAccount(), panelInnerForms);
+            ChildForms.openChildForm(new ViewAccount(), panelInnerForms);
             hideSubMenu();
         }
         private void btnUpdateAccount_Click_1(object sender, EventArgs e)
         {
-            form.openChildForm(new UpdateAccount(), panelInnerForms);
+            ChildForms.openChildForm(new UpdateAccount(), panelInnerForms);
             hideSubMenu();
         }
 
@@ -81,21 +80,30 @@ namespace Attendance_App.LecturerForms
         #region Classes Sub Menu Options
         private void btnViewClasses_Click(object sender, EventArgs e)
         {
-            form.openChildForm(new ViewClasses(), panelInnerForms);
+            ChildForms.openChildForm(new ViewClasses(), panelInnerForms);
             hideSubMenu();
         }
 
         private void btnViewClassAttendance_Click(object sender, EventArgs e)
         {
-            form.openChildForm(new ViewClassAttendance(), panelInnerForms);
+            ChildForms.openChildForm(new ViewClassAttendance(), panelInnerForms);
             hideSubMenu();
         }
 
         private void btnAddStudentGrades_Click(object sender, EventArgs e)
         {
-            form.openChildForm(new AddStudentGrades(), panelInnerForms);
+            ChildForms.openChildForm(new AddStudentGrades(), panelInnerForms);
             hideSubMenu();
         }
         #endregion
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            CurrentLogin.currentID = null;
+            CurrentLogin.currentID = null;
+            Login loginForm = new Login();
+            this.Close();
+            loginForm.Show();
+        }
     }
 }
