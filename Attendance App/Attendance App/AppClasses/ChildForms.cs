@@ -11,8 +11,8 @@ namespace Attendance_App.AppClasses
 {
     class ChildForms
     {
-        private Form activeForm = null;
-        public void openChildForm(Form childForm, Panel childPanel)
+        private static Form activeForm = null;
+        public static void openChildForm(Form childForm, Panel childPanel)
         {
             if (activeForm != null)
             {
