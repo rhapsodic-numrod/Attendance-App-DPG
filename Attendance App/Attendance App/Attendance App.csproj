@@ -111,6 +111,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>allUsers.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AppClasses\Attendance.cs" />
     <Compile Include="AppClasses\ChildForms.cs" />
     <Compile Include="AppClasses\CurrentLogin.cs" />
     <Compile Include="AttendanceDatabaseDataSet.Designer.cs">
