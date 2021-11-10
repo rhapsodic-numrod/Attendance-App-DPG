@@ -93,7 +93,7 @@ namespace Attendance_App.StudentForms
             CurrentLogin.currentID = null;
             Login loginForm = new Login();
             this.Close();
-            loginForm.Show()
+            loginForm.Show();
         }
 
         #endregion
@@ -107,6 +107,23 @@ namespace Attendance_App.StudentForms
         private void btnUpdateAccount_Click(object sender, EventArgs e)
         {
             ChildForms.openChildForm(new UpdateAccount(), panelInnerForms);
+        }
+        #endregion
+
+        #region Classes submenu options
+        private void btnViewClasses_Click(object sender, EventArgs e)
+        {
+            ChildForms.openChildForm(new ViewClasses(), panelInnerForms);
+        }
+
+        private void btnViewClassAttendance_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnChooseModules_Click(object sender, EventArgs e)
+        {
+            ChildForms.openChildForm(new ChooseModule(), panelInnerForms);
         }
         #endregion
     }

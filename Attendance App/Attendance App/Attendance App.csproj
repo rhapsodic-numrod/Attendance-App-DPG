@@ -119,6 +119,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AttendanceDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="attendanceDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>attendanceDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="classesAvailable.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -186,6 +191,12 @@
     <Compile Include="StudentForms\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentForms\ChooseModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForms\ChooseModule.Designer.cs">
+      <DependentUpon>ChooseModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentForms\StudentMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +214,12 @@
     </Compile>
     <Compile Include="StudentForms\ViewAccount.designer.cs">
       <DependentUpon>ViewAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentForms\ViewClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForms\ViewClasses.Designer.cs">
+      <DependentUpon>ViewClasses.cs</DependentUpon>
     </Compile>
     <Compile Include="viewClassesYouTeach.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -269,6 +286,9 @@
     <EmbeddedResource Include="StudentForms\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentForms\ChooseModule.resx">
+      <DependentUpon>ChooseModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentForms\StudentMainForm.resx">
       <DependentUpon>StudentMainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentForms\ViewAccount.resx">
       <DependentUpon>ViewAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForms\ViewClasses.resx">
+      <DependentUpon>ViewClasses.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="allUsers.xsc">
       <DependentUpon>allUsers.xsd</DependentUpon>
@@ -299,6 +322,17 @@
     </None>
     <None Include="AttendanceDatabaseDataSet.xss">
       <DependentUpon>AttendanceDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceDatabaseDataSet1.xsc">
+      <DependentUpon>attendanceDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>attendanceDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="attendanceDatabaseDataSet1.xss">
+      <DependentUpon>attendanceDatabaseDataSet1.xsd</DependentUpon>
     </None>
     <None Include="classesAvailable.xsc">
       <DependentUpon>classesAvailable.xsd</DependentUpon>

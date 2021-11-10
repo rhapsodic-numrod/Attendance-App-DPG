@@ -39,7 +39,7 @@
             this.btnClasses = new System.Windows.Forms.Button();
             this.panelClassesSubMenu = new System.Windows.Forms.Panel();
             this.btnChooseModules = new System.Windows.Forms.Button();
-            this.btnViewClassAttendance = new System.Windows.Forms.Button();
+            this.btnViewTakeAttendance = new System.Windows.Forms.Button();
             this.btnViewClasses = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
@@ -190,7 +190,7 @@
             // 
             this.panelClassesSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(109)))), ((int)(((byte)(122)))));
             this.panelClassesSubMenu.Controls.Add(this.btnChooseModules);
-            this.panelClassesSubMenu.Controls.Add(this.btnViewClassAttendance);
+            this.panelClassesSubMenu.Controls.Add(this.btnViewTakeAttendance);
             this.panelClassesSubMenu.Controls.Add(this.btnViewClasses);
             this.panelClassesSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelClassesSubMenu.Location = new System.Drawing.Point(0, 402);
@@ -214,22 +214,24 @@
             this.btnChooseModules.Text = "Choose Modules";
             this.btnChooseModules.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChooseModules.UseVisualStyleBackColor = true;
+            this.btnChooseModules.Click += new System.EventHandler(this.btnChooseModules_Click);
             // 
-            // btnViewClassAttendance
+            // btnViewTakeAttendance
             // 
-            this.btnViewClassAttendance.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnViewClassAttendance.FlatAppearance.BorderSize = 0;
-            this.btnViewClassAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewClassAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewClassAttendance.ForeColor = System.Drawing.Color.White;
-            this.btnViewClassAttendance.Location = new System.Drawing.Point(0, 40);
-            this.btnViewClassAttendance.Name = "btnViewClassAttendance";
-            this.btnViewClassAttendance.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnViewClassAttendance.Size = new System.Drawing.Size(223, 40);
-            this.btnViewClassAttendance.TabIndex = 1;
-            this.btnViewClassAttendance.Text = "Take Attendance";
-            this.btnViewClassAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewClassAttendance.UseVisualStyleBackColor = true;
+            this.btnViewTakeAttendance.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewTakeAttendance.FlatAppearance.BorderSize = 0;
+            this.btnViewTakeAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewTakeAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewTakeAttendance.ForeColor = System.Drawing.Color.White;
+            this.btnViewTakeAttendance.Location = new System.Drawing.Point(0, 40);
+            this.btnViewTakeAttendance.Name = "btnViewTakeAttendance";
+            this.btnViewTakeAttendance.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnViewTakeAttendance.Size = new System.Drawing.Size(223, 40);
+            this.btnViewTakeAttendance.TabIndex = 1;
+            this.btnViewTakeAttendance.Text = "Take Attendance";
+            this.btnViewTakeAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewTakeAttendance.UseVisualStyleBackColor = true;
+            this.btnViewTakeAttendance.Click += new System.EventHandler(this.btnViewClassAttendance_Click);
             // 
             // btnViewClasses
             // 
@@ -246,6 +248,7 @@
             this.btnViewClasses.Text = "View Classes";
             this.btnViewClasses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnViewClasses.UseVisualStyleBackColor = true;
+            this.btnViewClasses.Click += new System.EventHandler(this.btnViewClasses_Click);
             // 
             // btnLogOut
             // 
@@ -295,7 +298,7 @@
         private System.Windows.Forms.Button btnClasses;
         private System.Windows.Forms.Panel panelClassesSubMenu;
         private System.Windows.Forms.Button btnChooseModules;
-        private System.Windows.Forms.Button btnViewClassAttendance;
+        private System.Windows.Forms.Button btnViewTakeAttendance;
         private System.Windows.Forms.Button btnViewClasses;
         private System.Windows.Forms.Button btnLogOut;
     }
