@@ -63,7 +63,6 @@ namespace Attendance_App.AdminForms
         private void btnGoToChangePassword_Click(object sender, EventArgs e)
         {
             ChangePassword changePass = new ChangePassword();
-            //this.Hide();
             changePass.Show();
         }
     }

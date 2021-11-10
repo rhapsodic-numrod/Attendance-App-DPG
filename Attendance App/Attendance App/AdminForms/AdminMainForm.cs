@@ -16,6 +16,10 @@ namespace Attendance_App.AdminForms
         public AdminMainForm()
         {
             InitializeComponent();
+            //if (PasswordForm.canOpenForm == true)
+            //{
+            //    openChangePassForm();
+            //}
         }
         #region Button Hide and Show
         private void hideSubMenu()
@@ -61,17 +65,17 @@ namespace Attendance_App.AdminForms
         }
         #endregion
 
-        ChildForms form = new ChildForms();
+        //ChildForms form = new ChildForms();
         #region Account Sub Menu
         private void btnViewAccount_Click(object sender, EventArgs e)
         {
-            form.openChildForm(new ViewAccount(), panelInnerForms);
+            ChildForms.openChildForm(new ViewAccount(), panelInnerForms);
             hideSubMenu();
         }
 
         private void btnUpdateAccount_Click(object sender, EventArgs e)
         {
-            form.openChildForm(new UpdateAccount(), panelInnerForms);
+            ChildForms.openChildForm(new UpdateAccount(), panelInnerForms);
             hideSubMenu();
         }
 
@@ -79,21 +83,30 @@ namespace Attendance_App.AdminForms
         #region Users Sub Menu
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            form.openChildForm(new AddUserForm(), panelInnerForms);
+            ChildForms.openChildForm(new AddUserForm(), panelInnerForms);
             hideSubMenu();
         }
 
         private void btnUpdateUser_Click(object sender, EventArgs e)
         {
-            form.openChildForm(new UpdateUser(), panelInnerForms);
+            ChildForms.openChildForm(new UpdateUser(), panelInnerForms);
             hideSubMenu();
         }
 
         private void btnSearchUser_Click(object sender, EventArgs e)
         {
-            form.openChildForm(new SearchUser(), panelInnerForms);
+            ChildForms.openChildForm(new SearchUser(), panelInnerForms);
             hideSubMenu();
         }
         #endregion
+        
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            CurrentLogin.currentID = null;
+            CurrentLogin.currentID = null;
+            Login loginForm = new Login();
+            this.Close();
+            loginForm.Show();
+        }
     }
 }

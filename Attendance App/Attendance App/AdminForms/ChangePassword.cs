@@ -20,11 +20,6 @@ namespace Attendance_App.AdminForms
             InitializeComponent();
         }
 
-        private void btnCloseForm_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         static string connectionString = ConfigurationManager.ConnectionStrings["connString"].ConnectionString;
         SqlConnection conn = new SqlConnection(connectionString);
         private void btnChangePassword_Click(object sender, EventArgs e)
