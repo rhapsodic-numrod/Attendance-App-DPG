@@ -41,18 +41,26 @@ namespace Attendance_App.LecturerForms
             selectClass.Parameters.Add("@result", SqlDbType.VarChar, 250); //specify output parameter
             selectClass.Parameters["@result"].Direction = ParameterDirection.Output;
 
-            SqlDataReader reader = selectClass.ExecuteReader();
-            string outputValue = selectClass.Parameters["@result"].Value.ToString(); //store the value in the output parameter
-            if (reader.HasRows)
+            bool isNumber = int.TryParse(txtBoxClassID.Text, out _);
+            if (isNumber)
             {
-                MessageBox.Show(outputValue);
+                SqlDataReader reader = selectClass.ExecuteReader();
+                string outputValue = selectClass.Parameters["@result"].Value.ToString(); //store the value in the output parameter
+                if (reader.HasRows)
+                {
+                    MessageBox.Show(outputValue);
+                }
+                else
+                {
+                    MessageBox.Show(outputValue);
+                }
+                reader.Close();
+                conn.Close();
             }
             else
             {
-                MessageBox.Show(outputValue);
+                MessageBox.Show("Class ID must be a number");
             }
-            reader.Close();
-            conn.Close();
         }
 
         private void dataGridViewAvailableClasses_CellContentClick(object sender, DataGridViewCellEventArgs e)
