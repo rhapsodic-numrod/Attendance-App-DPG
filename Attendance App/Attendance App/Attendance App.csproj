@@ -119,6 +119,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AttendanceDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="classesAvailable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>classesAvailable.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LecturerForms\AddStudentGrades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +135,12 @@
     </Compile>
     <Compile Include="LecturerForms\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecturerForms\ChooseClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerForms\ChooseClass.Designer.cs">
+      <DependentUpon>ChooseClass.cs</DependentUpon>
     </Compile>
     <Compile Include="LecturerForms\LecturerMainForm.cs">
       <SubType>Form</SubType>
@@ -193,6 +204,11 @@
     <Compile Include="StudentForms\ViewAccount.designer.cs">
       <DependentUpon>ViewAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="viewClassesYouTeach.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>viewClassesYouTeach.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminForms\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LecturerForms\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturerForms\ChooseClass.resx">
+      <DependentUpon>ChooseClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LecturerForms\LecturerMainForm.resx">
       <DependentUpon>LecturerMainForm.cs</DependentUpon>
@@ -281,6 +300,17 @@
     <None Include="AttendanceDatabaseDataSet.xss">
       <DependentUpon>AttendanceDatabaseDataSet.xsd</DependentUpon>
     </None>
+    <None Include="classesAvailable.xsc">
+      <DependentUpon>classesAvailable.xsd</DependentUpon>
+    </None>
+    <None Include="classesAvailable.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>classesAvailable.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="classesAvailable.xss">
+      <DependentUpon>classesAvailable.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -290,6 +320,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="viewClassesYouTeach.xsc">
+      <DependentUpon>viewClassesYouTeach.xsd</DependentUpon>
+    </None>
+    <None Include="viewClassesYouTeach.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>viewClassesYouTeach.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="viewClassesYouTeach.xss">
+      <DependentUpon>viewClassesYouTeach.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

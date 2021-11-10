@@ -30,6 +30,7 @@ namespace Attendance_App.LecturerForms
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.panelClassesSubMenu = new System.Windows.Forms.Panel();
             this.btnAddStudentGrades = new System.Windows.Forms.Button();
             this.btnViewClassAttendance = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@ namespace Attendance_App.LecturerForms
             this.btnHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelInnerForms = new System.Windows.Forms.Panel();
-            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnChooseClasses = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelClassesSubMenu.SuspendLayout();
             this.panelAccountSubMenu.SuspendLayout();
@@ -66,16 +67,35 @@ namespace Attendance_App.LecturerForms
             this.panelSideMenu.Size = new System.Drawing.Size(240, 611);
             this.panelSideMenu.TabIndex = 1;
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(168)))), ((int)(((byte)(172)))));
+            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Location = new System.Drawing.Point(0, 572);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLogOut.Size = new System.Drawing.Size(223, 50);
+            this.btnLogOut.TabIndex = 7;
+            this.btnLogOut.Text = "Logout";
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // panelClassesSubMenu
             // 
             this.panelClassesSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(109)))), ((int)(((byte)(122)))));
+            this.panelClassesSubMenu.Controls.Add(this.btnChooseClasses);
             this.panelClassesSubMenu.Controls.Add(this.btnAddStudentGrades);
             this.panelClassesSubMenu.Controls.Add(this.btnViewClassAttendance);
             this.panelClassesSubMenu.Controls.Add(this.btnViewClasses);
             this.panelClassesSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelClassesSubMenu.Location = new System.Drawing.Point(0, 404);
             this.panelClassesSubMenu.Name = "panelClassesSubMenu";
-            this.panelClassesSubMenu.Size = new System.Drawing.Size(240, 130);
+            this.panelClassesSubMenu.Size = new System.Drawing.Size(223, 168);
             this.panelClassesSubMenu.TabIndex = 5;
             this.panelClassesSubMenu.Visible = false;
             // 
@@ -88,7 +108,7 @@ namespace Attendance_App.LecturerForms
             this.btnAddStudentGrades.Location = new System.Drawing.Point(0, 80);
             this.btnAddStudentGrades.Name = "btnAddStudentGrades";
             this.btnAddStudentGrades.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAddStudentGrades.Size = new System.Drawing.Size(240, 40);
+            this.btnAddStudentGrades.Size = new System.Drawing.Size(223, 40);
             this.btnAddStudentGrades.TabIndex = 2;
             this.btnAddStudentGrades.Text = "Add Student Grades";
             this.btnAddStudentGrades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -104,7 +124,7 @@ namespace Attendance_App.LecturerForms
             this.btnViewClassAttendance.Location = new System.Drawing.Point(0, 40);
             this.btnViewClassAttendance.Name = "btnViewClassAttendance";
             this.btnViewClassAttendance.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnViewClassAttendance.Size = new System.Drawing.Size(240, 40);
+            this.btnViewClassAttendance.Size = new System.Drawing.Size(223, 40);
             this.btnViewClassAttendance.TabIndex = 1;
             this.btnViewClassAttendance.Text = "View Class Attendance";
             this.btnViewClassAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -120,7 +140,7 @@ namespace Attendance_App.LecturerForms
             this.btnViewClasses.Location = new System.Drawing.Point(0, 0);
             this.btnViewClasses.Name = "btnViewClasses";
             this.btnViewClasses.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnViewClasses.Size = new System.Drawing.Size(240, 40);
+            this.btnViewClasses.Size = new System.Drawing.Size(223, 40);
             this.btnViewClasses.TabIndex = 0;
             this.btnViewClasses.Text = "View Classes";
             this.btnViewClasses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,7 +158,7 @@ namespace Attendance_App.LecturerForms
             this.btnClasses.Location = new System.Drawing.Point(0, 354);
             this.btnClasses.Name = "btnClasses";
             this.btnClasses.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnClasses.Size = new System.Drawing.Size(240, 50);
+            this.btnClasses.Size = new System.Drawing.Size(223, 50);
             this.btnClasses.TabIndex = 4;
             this.btnClasses.Text = "Classes";
             this.btnClasses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,7 +173,7 @@ namespace Attendance_App.LecturerForms
             this.panelAccountSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAccountSubMenu.Location = new System.Drawing.Point(0, 259);
             this.panelAccountSubMenu.Name = "panelAccountSubMenu";
-            this.panelAccountSubMenu.Size = new System.Drawing.Size(240, 95);
+            this.panelAccountSubMenu.Size = new System.Drawing.Size(223, 95);
             this.panelAccountSubMenu.TabIndex = 3;
             this.panelAccountSubMenu.Visible = false;
             // 
@@ -166,7 +186,7 @@ namespace Attendance_App.LecturerForms
             this.btnUpdateAccount.Location = new System.Drawing.Point(0, 40);
             this.btnUpdateAccount.Name = "btnUpdateAccount";
             this.btnUpdateAccount.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUpdateAccount.Size = new System.Drawing.Size(240, 40);
+            this.btnUpdateAccount.Size = new System.Drawing.Size(223, 40);
             this.btnUpdateAccount.TabIndex = 1;
             this.btnUpdateAccount.Text = "Update Account";
             this.btnUpdateAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,7 +202,7 @@ namespace Attendance_App.LecturerForms
             this.btnViewAccount.Location = new System.Drawing.Point(0, 0);
             this.btnViewAccount.Name = "btnViewAccount";
             this.btnViewAccount.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnViewAccount.Size = new System.Drawing.Size(240, 40);
+            this.btnViewAccount.Size = new System.Drawing.Size(223, 40);
             this.btnViewAccount.TabIndex = 0;
             this.btnViewAccount.Text = "View Account";
             this.btnViewAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -200,7 +220,7 @@ namespace Attendance_App.LecturerForms
             this.btnAccount.Location = new System.Drawing.Point(0, 209);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAccount.Size = new System.Drawing.Size(240, 50);
+            this.btnAccount.Size = new System.Drawing.Size(223, 50);
             this.btnAccount.TabIndex = 2;
             this.btnAccount.Text = "Account";
             this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -218,7 +238,7 @@ namespace Attendance_App.LecturerForms
             this.btnHome.Location = new System.Drawing.Point(0, 159);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(240, 50);
+            this.btnHome.Size = new System.Drawing.Size(223, 50);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,7 +251,7 @@ namespace Attendance_App.LecturerForms
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(240, 159);
+            this.panelLogo.Size = new System.Drawing.Size(223, 159);
             this.panelLogo.TabIndex = 0;
             // 
             // panelInnerForms
@@ -243,23 +263,21 @@ namespace Attendance_App.LecturerForms
             this.panelInnerForms.Size = new System.Drawing.Size(744, 611);
             this.panelInnerForms.TabIndex = 2;
             // 
-            // btnLogOut
+            // btnChooseClasses
             // 
-            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(168)))), ((int)(((byte)(172)))));
-            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 534);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnLogOut.Size = new System.Drawing.Size(240, 50);
-            this.btnLogOut.TabIndex = 7;
-            this.btnLogOut.Text = "Logout";
-            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.UseVisualStyleBackColor = false;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            this.btnChooseClasses.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnChooseClasses.FlatAppearance.BorderSize = 0;
+            this.btnChooseClasses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChooseClasses.ForeColor = System.Drawing.Color.White;
+            this.btnChooseClasses.Location = new System.Drawing.Point(0, 120);
+            this.btnChooseClasses.Name = "btnChooseClasses";
+            this.btnChooseClasses.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnChooseClasses.Size = new System.Drawing.Size(223, 40);
+            this.btnChooseClasses.TabIndex = 3;
+            this.btnChooseClasses.Text = "Choose Classes";
+            this.btnChooseClasses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChooseClasses.UseVisualStyleBackColor = true;
+            this.btnChooseClasses.Click += new System.EventHandler(this.btnChooseClasses_Click);
             // 
             // LecturerMainForm
             // 
@@ -295,5 +313,6 @@ namespace Attendance_App.LecturerForms
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelInnerForms;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnChooseClasses;
     }
 }

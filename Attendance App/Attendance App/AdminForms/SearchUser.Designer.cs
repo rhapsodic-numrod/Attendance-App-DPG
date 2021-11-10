@@ -33,25 +33,25 @@ namespace Attendance_App.AdminForms
             this.SearchText = new System.Windows.Forms.Label();
             this.panelSearchBox = new System.Windows.Forms.Panel();
             this.dataGridViewResults = new System.Windows.Forms.DataGridView();
-            this.txtBoxSearchParam = new System.Windows.Forms.TextBox();
-            this.btnCloseForm = new System.Windows.Forms.Button();
-            this.attendanceDatabaseDataSet = new Attendance_App.AttendanceDatabaseDataSet();
-            this.attendanceDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.allUsers = new Attendance_App.allUsers();
-            this.allUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.allUsersTableAdapter = new Attendance_App.allUsersTableAdapters.allUsersTableAdapter();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userMobileDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.allUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.allUsers = new Attendance_App.allUsers();
+            this.txtBoxSearchParam = new System.Windows.Forms.TextBox();
+            this.btnCloseForm = new System.Windows.Forms.Button();
+            this.attendanceDatabaseDataSet = new Attendance_App.AttendanceDatabaseDataSet();
+            this.attendanceDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.allUsersTableAdapter = new Attendance_App.allUsersTableAdapters.allUsersTableAdapter();
             this.panelSearchBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allUsersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.attendanceDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.attendanceDatabaseDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allUsersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchText
@@ -81,6 +81,8 @@ namespace Attendance_App.AdminForms
             // 
             // dataGridViewResults
             // 
+            this.dataGridViewResults.AllowUserToAddRows = false;
+            this.dataGridViewResults.AllowUserToDeleteRows = false;
             this.dataGridViewResults.AutoGenerateColumns = false;
             this.dataGridViewResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -93,8 +95,61 @@ namespace Attendance_App.AdminForms
             this.dataGridViewResults.DataSource = this.allUsersBindingSource;
             this.dataGridViewResults.Location = new System.Drawing.Point(86, 105);
             this.dataGridViewResults.Name = "dataGridViewResults";
+            this.dataGridViewResults.ReadOnly = true;
             this.dataGridViewResults.Size = new System.Drawing.Size(449, 262);
             this.dataGridViewResults.TabIndex = 2;
+            // 
+            // userIDDataGridViewTextBoxColumn
+            // 
+            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "userID";
+            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "firstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "firstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // middleNameDataGridViewTextBoxColumn
+            // 
+            this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "middleName";
+            this.middleNameDataGridViewTextBoxColumn.HeaderText = "middleName";
+            this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
+            this.middleNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "lastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "lastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userEmailDataGridViewTextBoxColumn
+            // 
+            this.userEmailDataGridViewTextBoxColumn.DataPropertyName = "userEmail";
+            this.userEmailDataGridViewTextBoxColumn.HeaderText = "userEmail";
+            this.userEmailDataGridViewTextBoxColumn.Name = "userEmailDataGridViewTextBoxColumn";
+            this.userEmailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userMobileDataGridViewTextBoxColumn
+            // 
+            this.userMobileDataGridViewTextBoxColumn.DataPropertyName = "userMobile";
+            this.userMobileDataGridViewTextBoxColumn.HeaderText = "userMobile";
+            this.userMobileDataGridViewTextBoxColumn.Name = "userMobileDataGridViewTextBoxColumn";
+            this.userMobileDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // allUsersBindingSource
+            // 
+            this.allUsersBindingSource.DataMember = "allUsers";
+            this.allUsersBindingSource.DataSource = this.allUsers;
+            // 
+            // allUsers
+            // 
+            this.allUsers.DataSetName = "allUsers";
+            this.allUsers.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtBoxSearchParam
             // 
@@ -131,55 +186,9 @@ namespace Attendance_App.AdminForms
             this.attendanceDatabaseDataSetBindingSource.DataSource = this.attendanceDatabaseDataSet;
             this.attendanceDatabaseDataSetBindingSource.Position = 0;
             // 
-            // allUsers
-            // 
-            this.allUsers.DataSetName = "allUsers";
-            this.allUsers.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // allUsersBindingSource
-            // 
-            this.allUsersBindingSource.DataMember = "allUsers";
-            this.allUsersBindingSource.DataSource = this.allUsers;
-            // 
             // allUsersTableAdapter
             // 
             this.allUsersTableAdapter.ClearBeforeFill = true;
-            // 
-            // userIDDataGridViewTextBoxColumn
-            // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "userID";
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "firstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "firstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // middleNameDataGridViewTextBoxColumn
-            // 
-            this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "middleName";
-            this.middleNameDataGridViewTextBoxColumn.HeaderText = "middleName";
-            this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "lastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "lastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // userEmailDataGridViewTextBoxColumn
-            // 
-            this.userEmailDataGridViewTextBoxColumn.DataPropertyName = "userEmail";
-            this.userEmailDataGridViewTextBoxColumn.HeaderText = "userEmail";
-            this.userEmailDataGridViewTextBoxColumn.Name = "userEmailDataGridViewTextBoxColumn";
-            // 
-            // userMobileDataGridViewTextBoxColumn
-            // 
-            this.userMobileDataGridViewTextBoxColumn.DataPropertyName = "userMobile";
-            this.userMobileDataGridViewTextBoxColumn.HeaderText = "userMobile";
-            this.userMobileDataGridViewTextBoxColumn.Name = "userMobileDataGridViewTextBoxColumn";
             // 
             // SearchUser
             // 
@@ -199,10 +208,10 @@ namespace Attendance_App.AdminForms
             this.panelSearchBox.ResumeLayout(false);
             this.panelSearchBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allUsersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.attendanceDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.attendanceDatabaseDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allUsersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
