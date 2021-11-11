@@ -15,7 +15,7 @@ BEGIN
                             SET @result = 'Availability successfully changed to Available'
                         END
                     ELSE
-                        SET @result = 'You have already made this class Available for attendance'
+                        SET @result = 'Class is already Available for attendance'
                 END
             ELSE
                 SET @result = 'You do not have access to this class.'
@@ -30,7 +30,7 @@ BEGIN
                             SET @result = 'Availability successfully changed to Unavailable'
                         END
                     ELSE
-                        SET @result = 'You have already made this class Unavailable for attendance'
+                        SET @result = 'Class is already Unavailable for attendance'
                 END
             ELSE
                 SET @result = 'You do not have access to this class.'

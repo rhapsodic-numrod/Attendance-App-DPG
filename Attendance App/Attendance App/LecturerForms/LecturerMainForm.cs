@@ -101,6 +101,10 @@ namespace Attendance_App.LecturerForms
             ChildForms.openChildForm(new ChooseClass(), panelInnerForms);
             hideSubMenu();
         }
+        private void btnMakeAvailable_Click(object sender, EventArgs e)
+        {
+            ChildForms.openChildForm(new MakeAttendanceAvailable(), panelInnerForms);
+        }
         #endregion
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -112,5 +116,6 @@ namespace Attendance_App.LecturerForms
             loginForm.Show();
         }
 
+        
     }
 }

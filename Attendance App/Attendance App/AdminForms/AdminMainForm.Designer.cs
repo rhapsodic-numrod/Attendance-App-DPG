@@ -29,7 +29,9 @@ namespace Attendance_App.AdminForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.panelUsersSubMenu = new System.Windows.Forms.Panel();
             this.btnSearchUser = new System.Windows.Forms.Button();
             this.btnUpdateUser = new System.Windows.Forms.Button();
@@ -42,10 +44,12 @@ namespace Attendance_App.AdminForms
             this.btnHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelInnerForms = new System.Windows.Forms.Panel();
-            this.btnLogOut = new System.Windows.Forms.Button();
+            this.pictureBoxNustLogo = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelUsersSubMenu.SuspendLayout();
             this.panelAccountSubMenu.SuspendLayout();
+            this.panelInnerForms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNustLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -65,6 +69,24 @@ namespace Attendance_App.AdminForms
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(240, 611);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(168)))), ((int)(((byte)(172)))));
+            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Location = new System.Drawing.Point(0, 528);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLogOut.Size = new System.Drawing.Size(240, 50);
+            this.btnLogOut.TabIndex = 6;
+            this.btnLogOut.Text = "Logout";
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // panelUsersSubMenu
             // 
@@ -236,29 +258,25 @@ namespace Attendance_App.AdminForms
             // 
             // panelInnerForms
             // 
+            this.panelInnerForms.Controls.Add(this.pictureBoxNustLogo);
             this.panelInnerForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInnerForms.Location = new System.Drawing.Point(240, 0);
             this.panelInnerForms.Name = "panelInnerForms";
             this.panelInnerForms.Size = new System.Drawing.Size(744, 611);
             this.panelInnerForms.TabIndex = 1;
             // 
-            // btnLogOut
+            // pictureBoxNustLogo
             // 
-            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(168)))), ((int)(((byte)(172)))));
-            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 528);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnLogOut.Size = new System.Drawing.Size(240, 50);
-            this.btnLogOut.TabIndex = 6;
-            this.btnLogOut.Text = "Logout";
-            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.UseVisualStyleBackColor = false;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            this.pictureBoxNustLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxNustLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNustLogo.Image")));
+            this.pictureBoxNustLogo.Location = new System.Drawing.Point(149, 106);
+            this.pictureBoxNustLogo.Name = "pictureBoxNustLogo";
+            this.pictureBoxNustLogo.Size = new System.Drawing.Size(495, 378);
+            this.pictureBoxNustLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxNustLogo.TabIndex = 0;
+            this.pictureBoxNustLogo.TabStop = false;
             // 
             // AdminMainForm
             // 
@@ -275,6 +293,8 @@ namespace Attendance_App.AdminForms
             this.panelSideMenu.ResumeLayout(false);
             this.panelUsersSubMenu.ResumeLayout(false);
             this.panelAccountSubMenu.ResumeLayout(false);
+            this.panelInnerForms.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNustLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -295,5 +315,6 @@ namespace Attendance_App.AdminForms
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelInnerForms;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.PictureBox pictureBoxNustLogo;
     }
 }

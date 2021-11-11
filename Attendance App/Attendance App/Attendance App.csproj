@@ -124,6 +124,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>attendanceDatabaseDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="attendanceDatabaseDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>attendanceDatabaseDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="attendanceDatabaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>attendanceDatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="classesAvailable.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -152,6 +162,12 @@
     </Compile>
     <Compile Include="LecturerForms\LecturerMainForm.Designer.cs">
       <DependentUpon>LecturerMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecturerForms\MakeAttendanceAvailable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerForms\MakeAttendanceAvailable.Designer.cs">
+      <DependentUpon>MakeAttendanceAvailable.cs</DependentUpon>
     </Compile>
     <Compile Include="LecturerForms\UpdateAccount.cs">
       <SubType>Form</SubType>
@@ -202,6 +218,12 @@
     </Compile>
     <Compile Include="StudentForms\StudentMainForm.Designer.cs">
       <DependentUpon>StudentMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentForms\TakeAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForms\TakeAttendance.Designer.cs">
+      <DependentUpon>TakeAttendance.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentForms\UpdateAccount.cs">
       <SubType>Form</SubType>
@@ -259,6 +281,9 @@
     <EmbeddedResource Include="LecturerForms\LecturerMainForm.resx">
       <DependentUpon>LecturerMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LecturerForms\MakeAttendanceAvailable.resx">
+      <DependentUpon>MakeAttendanceAvailable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LecturerForms\UpdateAccount.resx">
       <DependentUpon>UpdateAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentForms\StudentMainForm.resx">
       <DependentUpon>StudentMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForms\TakeAttendance.resx">
+      <DependentUpon>TakeAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentForms\UpdateAccount.resx">
       <DependentUpon>UpdateAccount.cs</DependentUpon>
@@ -333,6 +361,28 @@
     </None>
     <None Include="attendanceDatabaseDataSet1.xss">
       <DependentUpon>attendanceDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceDatabaseDataSet11.xsc">
+      <DependentUpon>attendanceDatabaseDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceDatabaseDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>attendanceDatabaseDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="attendanceDatabaseDataSet11.xss">
+      <DependentUpon>attendanceDatabaseDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceDatabaseDataSet2.xsc">
+      <DependentUpon>attendanceDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceDatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>attendanceDatabaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="attendanceDatabaseDataSet2.xss">
+      <DependentUpon>attendanceDatabaseDataSet2.xsd</DependentUpon>
     </None>
     <None Include="classesAvailable.xsc">
       <DependentUpon>classesAvailable.xsd</DependentUpon>

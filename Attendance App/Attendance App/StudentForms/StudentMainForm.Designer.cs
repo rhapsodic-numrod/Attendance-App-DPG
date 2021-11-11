@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentMainForm));
             this.btnAccount = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -42,9 +43,12 @@
             this.btnViewTakeAttendance = new System.Windows.Forms.Button();
             this.btnViewClasses = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.pictureBoxNustLogo = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelAccountSubMenu.SuspendLayout();
+            this.panelInnerForms.SuspendLayout();
             this.panelClassesSubMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNustLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAccount
@@ -161,6 +165,7 @@
             // panelInnerForms
             // 
             this.panelInnerForms.BackColor = System.Drawing.Color.White;
+            this.panelInnerForms.Controls.Add(this.pictureBoxNustLogo);
             this.panelInnerForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInnerForms.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelInnerForms.Location = new System.Drawing.Point(223, 0);
@@ -268,6 +273,19 @@
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // pictureBoxNustLogo
+            // 
+            this.pictureBoxNustLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxNustLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNustLogo.Image")));
+            this.pictureBoxNustLogo.Location = new System.Drawing.Point(149, 106);
+            this.pictureBoxNustLogo.Name = "pictureBoxNustLogo";
+            this.pictureBoxNustLogo.Size = new System.Drawing.Size(495, 378);
+            this.pictureBoxNustLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxNustLogo.TabIndex = 1;
+            this.pictureBoxNustLogo.TabStop = false;
+            // 
             // StudentMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,10 +295,12 @@
             this.Controls.Add(this.panelInnerForms);
             this.Controls.Add(this.panelSideMenu);
             this.Name = "StudentMainForm";
-            this.Text = "StudentMainForm";
+            this.Text = "Attendance App";
             this.panelSideMenu.ResumeLayout(false);
             this.panelAccountSubMenu.ResumeLayout(false);
+            this.panelInnerForms.ResumeLayout(false);
             this.panelClassesSubMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNustLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -301,5 +321,6 @@
         private System.Windows.Forms.Button btnViewTakeAttendance;
         private System.Windows.Forms.Button btnViewClasses;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.PictureBox pictureBoxNustLogo;
     }
 }

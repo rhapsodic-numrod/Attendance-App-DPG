@@ -66,6 +66,7 @@ namespace Attendance_App.LecturerForms
             // 
             this.dataGridViewAllClassesYouTeach.AllowUserToAddRows = false;
             this.dataGridViewAllClassesYouTeach.AllowUserToDeleteRows = false;
+            this.dataGridViewAllClassesYouTeach.AllowUserToResizeRows = false;
             this.dataGridViewAllClassesYouTeach.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));

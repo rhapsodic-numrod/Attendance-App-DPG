@@ -63,8 +63,8 @@ FULL JOIN ClassType AS ct
 ON c.classTypeID = ct.typeID
 GO
 GO
-CREATE VIEW dbo.studentModules
+CREATE OR ALTER VIEW dbo.studentModules
 AS
-SELECT m.moduleID, sm.studentID, m.moduleName FROM Student_Module AS sm
+SELECT sm.moduleID, sm.studentID, m.moduleName FROM Student_Module AS sm
 FULL JOIN [Module] AS m
 ON sm.moduleID = m.moduleID

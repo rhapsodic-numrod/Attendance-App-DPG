@@ -29,6 +29,7 @@ namespace Attendance_App.LecturerForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LecturerMainForm));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panelClassesSubMenu = new System.Windows.Forms.Panel();
@@ -44,9 +45,13 @@ namespace Attendance_App.LecturerForms
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelInnerForms = new System.Windows.Forms.Panel();
             this.btnChooseClasses = new System.Windows.Forms.Button();
+            this.btnMakeAvailable = new System.Windows.Forms.Button();
+            this.pictureBoxNustLogo = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelClassesSubMenu.SuspendLayout();
             this.panelAccountSubMenu.SuspendLayout();
+            this.panelInnerForms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNustLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -75,7 +80,7 @@ namespace Attendance_App.LecturerForms
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 572);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 616);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnLogOut.Size = new System.Drawing.Size(223, 50);
@@ -88,6 +93,7 @@ namespace Attendance_App.LecturerForms
             // panelClassesSubMenu
             // 
             this.panelClassesSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(109)))), ((int)(((byte)(122)))));
+            this.panelClassesSubMenu.Controls.Add(this.btnMakeAvailable);
             this.panelClassesSubMenu.Controls.Add(this.btnChooseClasses);
             this.panelClassesSubMenu.Controls.Add(this.btnAddStudentGrades);
             this.panelClassesSubMenu.Controls.Add(this.btnViewClassAttendance);
@@ -95,7 +101,7 @@ namespace Attendance_App.LecturerForms
             this.panelClassesSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelClassesSubMenu.Location = new System.Drawing.Point(0, 404);
             this.panelClassesSubMenu.Name = "panelClassesSubMenu";
-            this.panelClassesSubMenu.Size = new System.Drawing.Size(223, 168);
+            this.panelClassesSubMenu.Size = new System.Drawing.Size(223, 212);
             this.panelClassesSubMenu.TabIndex = 5;
             this.panelClassesSubMenu.Visible = false;
             // 
@@ -257,6 +263,7 @@ namespace Attendance_App.LecturerForms
             // panelInnerForms
             // 
             this.panelInnerForms.BackColor = System.Drawing.Color.White;
+            this.panelInnerForms.Controls.Add(this.pictureBoxNustLogo);
             this.panelInnerForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInnerForms.Location = new System.Drawing.Point(240, 0);
             this.panelInnerForms.Name = "panelInnerForms";
@@ -279,6 +286,35 @@ namespace Attendance_App.LecturerForms
             this.btnChooseClasses.UseVisualStyleBackColor = true;
             this.btnChooseClasses.Click += new System.EventHandler(this.btnChooseClasses_Click);
             // 
+            // btnMakeAvailable
+            // 
+            this.btnMakeAvailable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMakeAvailable.FlatAppearance.BorderSize = 0;
+            this.btnMakeAvailable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMakeAvailable.ForeColor = System.Drawing.Color.White;
+            this.btnMakeAvailable.Location = new System.Drawing.Point(0, 160);
+            this.btnMakeAvailable.Name = "btnMakeAvailable";
+            this.btnMakeAvailable.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnMakeAvailable.Size = new System.Drawing.Size(223, 40);
+            this.btnMakeAvailable.TabIndex = 4;
+            this.btnMakeAvailable.Text = "Make Attendance Available";
+            this.btnMakeAvailable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMakeAvailable.UseVisualStyleBackColor = true;
+            this.btnMakeAvailable.Click += new System.EventHandler(this.btnMakeAvailable_Click);
+            // 
+            // pictureBoxNustLogo
+            // 
+            this.pictureBoxNustLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxNustLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNustLogo.Image")));
+            this.pictureBoxNustLogo.Location = new System.Drawing.Point(149, 106);
+            this.pictureBoxNustLogo.Name = "pictureBoxNustLogo";
+            this.pictureBoxNustLogo.Size = new System.Drawing.Size(495, 378);
+            this.pictureBoxNustLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxNustLogo.TabIndex = 1;
+            this.pictureBoxNustLogo.TabStop = false;
+            // 
             // LecturerMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -293,6 +329,8 @@ namespace Attendance_App.LecturerForms
             this.panelSideMenu.ResumeLayout(false);
             this.panelClassesSubMenu.ResumeLayout(false);
             this.panelAccountSubMenu.ResumeLayout(false);
+            this.panelInnerForms.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNustLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -314,5 +352,7 @@ namespace Attendance_App.LecturerForms
         private System.Windows.Forms.Panel panelInnerForms;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnChooseClasses;
+        private System.Windows.Forms.Button btnMakeAvailable;
+        private System.Windows.Forms.PictureBox pictureBoxNustLogo;
     }
 }

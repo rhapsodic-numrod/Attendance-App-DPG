@@ -89,8 +89,8 @@ namespace Attendance_App.StudentForms
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            CurrentLogin.currentID = null;
-            CurrentLogin.currentID = null;
+            //CurrentLogin.currentID = null;
+            //CurrentLogin.currentID = null;
             Login loginForm = new Login();
             this.Close();
             loginForm.Show();
@@ -118,7 +118,7 @@ namespace Attendance_App.StudentForms
 
         private void btnViewClassAttendance_Click(object sender, EventArgs e)
         {
-
+            ChildForms.openChildForm(new TakeAttendance(), panelInnerForms);
         }
 
         private void btnChooseModules_Click(object sender, EventArgs e)
