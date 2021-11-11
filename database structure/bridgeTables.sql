@@ -45,3 +45,26 @@ CREATE VIEW employeeLoginDetails AS
 SELECT r.roleID, e.empID, e.empPassword FROM Employee_Role AS r
 INNER JOIN Employee AS e
 ON e.empID = r.empID
+
+-- View all current classes available for lecturers to choose 
+CREATE VIEW classesAvailable AS
+SELECT c.classID, CONCAT(c.className + ' ', ct.className) AS ClassName FROM ClassType AS ct
+FULL JOIN Class AS c
+ON c.classTypeID = ct.typeID
+GO
+
+SELECT * FROM [Module]
+GO
+CREATE VIEW classInstructors AS
+SELECT ec.empID, c.classID, CONCAT(c.className + ' ', ct.className) AS ClassName FROM Employee_Class AS ec
+Full join Class AS c
+ON ec.classID = c.classID
+FULL JOIN ClassType AS ct
+ON c.classTypeID = ct.typeID
+GO
+GO
+CREATE VIEW dbo.studentModules
+AS
+SELECT m.moduleID, sm.studentID, m.moduleName FROM Student_Module AS sm
+FULL JOIN [Module] AS m
+ON sm.moduleID = m.moduleID

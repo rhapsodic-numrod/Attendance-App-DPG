@@ -60,7 +60,8 @@ CREATE TABLE Class(
 	classID INT PRIMARY KEY NOT NULL,
 	moduleID INT FOREIGN KEY REFERENCES Module(moduleID),
 	classTypeID INT FOREIGN KEY REFERENCES ClassType(typeID),
-	className VARCHAR(10)
+	className VARCHAR(10),
+	canAttend BIT DEFAULT 0
 )
 -- Adding roles and classtypes to tables
 INSERT INTO ClassType(typeID, className) VALUES(1,'Theory'), (2, 'Practival')
