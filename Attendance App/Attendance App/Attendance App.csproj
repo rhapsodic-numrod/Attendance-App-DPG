@@ -134,6 +134,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>attendanceDatabaseDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="attendanceDatabaseDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>attendanceDatabaseDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="attendanceDatabaseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>attendanceDatabaseDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="attendanceDatabaseDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>attendanceDatabaseDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="attendanceReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>attendanceReport.xsd</DependentUpon>
+    </Compile>
     <Compile Include="classesAvailable.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -383,6 +403,50 @@
     </None>
     <None Include="attendanceDatabaseDataSet2.xss">
       <DependentUpon>attendanceDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceDatabaseDataSet3.xsc">
+      <DependentUpon>attendanceDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceDatabaseDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>attendanceDatabaseDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="attendanceDatabaseDataSet3.xss">
+      <DependentUpon>attendanceDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceDatabaseDataSet4.xsc">
+      <DependentUpon>attendanceDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceDatabaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>attendanceDatabaseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="attendanceDatabaseDataSet4.xss">
+      <DependentUpon>attendanceDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceDatabaseDataSet5.xsc">
+      <DependentUpon>attendanceDatabaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceDatabaseDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>attendanceDatabaseDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="attendanceDatabaseDataSet5.xss">
+      <DependentUpon>attendanceDatabaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceReport.xsc">
+      <DependentUpon>attendanceReport.xsd</DependentUpon>
+    </None>
+    <None Include="attendanceReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>attendanceReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="attendanceReport.xss">
+      <DependentUpon>attendanceReport.xsd</DependentUpon>
     </None>
     <None Include="classesAvailable.xsc">
       <DependentUpon>classesAvailable.xsd</DependentUpon>

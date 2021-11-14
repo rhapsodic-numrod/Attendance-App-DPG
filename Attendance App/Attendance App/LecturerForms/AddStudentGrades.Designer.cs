@@ -29,6 +29,7 @@ namespace Attendance_App.LecturerForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCloseForm = new System.Windows.Forms.Button();
             this.comboBoxCourse = new System.Windows.Forms.ComboBox();
             this.ViewAttendanceText = new System.Windows.Forms.Label();
@@ -42,8 +43,18 @@ namespace Attendance_App.LecturerForms
             this.lblStudName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewStudentsDetails = new System.Windows.Forms.DataGridView();
+            this.attendanceDatabaseDataSet3 = new Attendance_App.attendanceDatabaseDataSet3();
+            this.lecturerModulesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lecturerModulesTableAdapter = new Attendance_App.attendanceDatabaseDataSet3TableAdapters.lecturerModulesTableAdapter();
+            this.attendanceDatabaseDataSet4 = new Attendance_App.attendanceDatabaseDataSet4();
+            this.lecturerModulesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lecturerModulesTableAdapter1 = new Attendance_App.attendanceDatabaseDataSet4TableAdapters.lecturerModulesTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudentsDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.attendanceDatabaseDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecturerModulesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.attendanceDatabaseDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecturerModulesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCloseForm
@@ -63,11 +74,14 @@ namespace Attendance_App.LecturerForms
             // 
             // comboBoxCourse
             // 
+            this.comboBoxCourse.DataSource = this.lecturerModulesBindingSource1;
+            this.comboBoxCourse.DisplayMember = "moduleName";
             this.comboBoxCourse.FormattingEnabled = true;
             this.comboBoxCourse.Location = new System.Drawing.Point(88, 67);
             this.comboBoxCourse.Name = "comboBoxCourse";
             this.comboBoxCourse.Size = new System.Drawing.Size(134, 24);
             this.comboBoxCourse.TabIndex = 21;
+            this.comboBoxCourse.ValueMember = "moduleID";
             // 
             // ViewAttendanceText
             // 
@@ -189,6 +203,34 @@ namespace Attendance_App.LecturerForms
             this.dataGridViewStudentsDetails.Size = new System.Drawing.Size(478, 122);
             this.dataGridViewStudentsDetails.TabIndex = 0;
             // 
+            // attendanceDatabaseDataSet3
+            // 
+            this.attendanceDatabaseDataSet3.DataSetName = "attendanceDatabaseDataSet3";
+            this.attendanceDatabaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lecturerModulesBindingSource
+            // 
+            this.lecturerModulesBindingSource.DataMember = "lecturerModules";
+            this.lecturerModulesBindingSource.DataSource = this.attendanceDatabaseDataSet3;
+            // 
+            // lecturerModulesTableAdapter
+            // 
+            this.lecturerModulesTableAdapter.ClearBeforeFill = true;
+            // 
+            // attendanceDatabaseDataSet4
+            // 
+            this.attendanceDatabaseDataSet4.DataSetName = "attendanceDatabaseDataSet4";
+            this.attendanceDatabaseDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lecturerModulesBindingSource1
+            // 
+            this.lecturerModulesBindingSource1.DataMember = "lecturerModules";
+            this.lecturerModulesBindingSource1.DataSource = this.attendanceDatabaseDataSet4;
+            // 
+            // lecturerModulesTableAdapter1
+            // 
+            this.lecturerModulesTableAdapter1.ClearBeforeFill = true;
+            // 
             // AddStudentGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -207,6 +249,10 @@ namespace Attendance_App.LecturerForms
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudentsDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.attendanceDatabaseDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecturerModulesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.attendanceDatabaseDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecturerModulesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,5 +273,11 @@ namespace Attendance_App.LecturerForms
         private System.Windows.Forms.Label lblStudName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewStudentsDetails;
+        private System.Windows.Forms.BindingSource lecturerModulesBindingSource;
+        private attendanceDatabaseDataSet3 attendanceDatabaseDataSet3;
+        private attendanceDatabaseDataSet3TableAdapters.lecturerModulesTableAdapter lecturerModulesTableAdapter;
+        private System.Windows.Forms.BindingSource lecturerModulesBindingSource1;
+        private attendanceDatabaseDataSet4 attendanceDatabaseDataSet4;
+        private attendanceDatabaseDataSet4TableAdapters.lecturerModulesTableAdapter lecturerModulesTableAdapter1;
     }
 }

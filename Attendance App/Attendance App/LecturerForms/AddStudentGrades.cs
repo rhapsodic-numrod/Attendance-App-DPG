@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Attendance_App.AppClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -51,6 +52,22 @@ namespace Attendance_App.LecturerForms
         private void btnAddGrade_Click(object sender, EventArgs e)
         {
             //TODO: Add functionality for adding grade
+        }
+        private void viewLecturerModule()
+        {
+
+        }
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.lecturerModulesTableAdapter.Fill(this.attendanceDatabaseDataSet3.lecturerModules, CurrentLogin.currentID);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }
